@@ -36,12 +36,14 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'rest_framework',
     'navori.apps.NavoriConfig',
 )
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -50,7 +52,7 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = 'core.urls'
-
+CORS_ORIGIN_ALLOW_ALL = True
 WSGI_APPLICATION = 'core.wsgi.application'
 
 REST_FRAMEWORK = {
