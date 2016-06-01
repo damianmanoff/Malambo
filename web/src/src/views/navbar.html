@@ -1,0 +1,33 @@
+<ul class="nav navbar-nav" data-ng-init="init()">
+
+    <!-- Notifications: style can be found in dropdown.less -->
+    <!-- User Account: style can be found in dropdown.less -->
+    <li class="dropdown user user-menu" ng-show="user != undefined">
+        <a class="dropdown-toggle" data-toggle="dropdown" style="height: 50px;">
+            <img ng-show="{{user.photoUrl == null}}" src="src/css/img/user-icon.jpg" class="user-image">
+            <img ng-show="{{user.photoUrl != null}}" src="{{user.photoUrl}}" class="user-image">
+            <span class="hidden-xs">{{user.userName}}</span>
+        </a>
+        <ul class="dropdown-menu">
+            <!-- User image -->
+            <li class="user-header">
+                <img ng-show="{{user.photoUrl == null}}" src="src/css/img/user-icon.jpg" class="img-circle">
+                <img ng-show="{{user.photoUrl != null}}" src="{{user.photoUrl}}" class="img-circle">
+                <p>
+                    {{user.name}} {{user.lastName}}
+                    <!--<small ng-show="{{user.creationDate != null}}">Miembro desde{{user.creationDate}}</small>-->
+                </p>
+            </li>
+            <!-- Menu Footer-->
+            <li class="user-footer">
+                <div class="pull-right">
+                    <button class="btn btn-default btn-flat" ng-click="signOut()">Salir</button>
+                </div>
+            </li>
+        </ul>
+    </li>
+    <!-- Control Sidebar Toggle Button -->
+    <!-- <li>
+        <a data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+    </li> -->
+</ul>

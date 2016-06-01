@@ -1,0 +1,5 @@
+<div class="invernadero" style="width:{{getAncho()}}px; height:{{getAlto()}}px; border: 1px solid black">
+	<img src="src/imgs/sensor.png" ng-repeat="sensor in settings.sensores" class="sensor  estado{{sensor.estado}}" style="bottom:{{getY(sensor)}}px; left:{{getX(sensor)}}px;"></img>
+
+	<img  src="src/imgs/ventilador.png" ng-repeat="ventilador in settings.ventiladores" class="ventilador estado{{ventilador.estado}}" style="bottom:{{getY(ventilador)}}px; left:{{getX(ventilador)}}px;"></img>
+</div>

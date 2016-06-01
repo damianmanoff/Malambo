@@ -1,0 +1,30 @@
+<div>
+    <!-- Sidebar user panel -->
+    <div class="user-panel continue-logo">
+        <div class="pull-left image">
+            <img src="src/css/img/logo.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+            <p>El lugar indicado</p>
+            <!-- <a href="#"><i class="fa fa-circle text-success"></i> Online</a> -->
+        </div>
+    </div>
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="sidebar-menu">
+        <li class="header">Menú principal</li>
+        <li ng-repeat="option in options track by $index" class="{{option.class}}">
+            <a ng-href="#/{{option.link}}">
+                <i class="{{option.icon}}"></i> <span>{{option.label}}</span> <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+                <li ng-repeat="menu in option.submenu track by $index" class="{{option.class}}">
+                
+                    <a ng-href="#/{{menu.link}}"><i class="{{menu.icon}}"></i>{{menu.label}}</a></li>
+                </li>
+            </ul>
+        </li>
+       
+        <!-- <li><a ng-href="#/contactUs"><i class="fa fa-book"></i> <span>Contáctenos</span></a></li> -->
+        
+    </ul>
+</div>

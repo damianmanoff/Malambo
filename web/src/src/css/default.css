@@ -1,0 +1,89 @@
+.continue-logo{
+	background-color: #367fa9;
+    color: #fff;
+    border-bottom: 0 solid transparent;
+}
+
+
+div.map_container {
+    float: left;
+    width: inherit;
+    height: 80vh;
+}
+
+.angular-google-map-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;    
+}
+
+div.controls {
+    float: right;
+    width: 30%;
+}
+
+.markerlabel {
+    font-weight: bold;
+    font-size: 13px;
+    border: 1px solid #333;
+    padding: 2px;
+    background: #fff;
+    color: #333;
+}
+
+h3 {
+    margin: 0 20px;
+}
+
+p {    
+    margin-top: 20px;
+    padding: 0 0 50px 20px;
+}
+
+.park-description{
+	float: right;
+    width: 263px;
+    height: 80vh;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    z-index: 2000;
+    border: 1px solid black;
+    border-radius: 17px;
+}
+.loading{
+        /* float: none; */
+    margin-left: 33%;
+    /* font-size: 30px; */
+    height: 80px;
+}
+.left{
+    float: left;
+}
+.transparent{
+    background-color: transparent !important;
+    color: white;
+    border: 0px;    
+}
+
+.login-box, .register-box {
+    width: 353px;
+    margin: 0% auto !important;
+}
+
+.parkImage{
+    width: initial !important;
+    border-radius: 0px !important;
+}
+
+@media (max-width: 960px) {
+    .mainMap {
+        margin: 15px;
+    }
+}
+
+@media (min-width: 960px) {
+
+}

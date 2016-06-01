@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">Estacionamientos</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <table datatable="ng" dt-options="showCase.dtOptions" dt-column-defs="showCase.dtColumnDefs" class="row-border hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Dirección</th>
+                            <th>Estado</th>
+                            <th>Ver en Mapa</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="parking in parkings">
+                            <td>{{parking.id}}</td>
+                            <td>{{parking.name}}</td>
+                            <td>{{parking.address}}</td>
+                            <td>{{translateStatus[parking.status]}}</td>
+                            <td><a class="btn btn-primary" ng-click="viewInMap(parking.latitude,parking.longitude)"> Ver en mapa</a></td>
+                            <td><a class="btn btn-success" ng-show="parking.status != '1'" ng-click="enable(parking.id, $index)"> Habilitar</a><a class="btn btn-danger" ng-show="parking.status == '1'" ng-click="disable(parking.id, $index)"> Deshabilitar</a></td>
+                            <td><a class="btn btn-info" ng-click="createOwner(parking.id)" ng-show="parking.status == 0" > Crear Dueño</a></td>
+                        </tr>
+                    </tbody>
+                    <!--  <tfoot>
+                      <tr>
+                        <th>Rendering engine</th>
+                        <th>Browser</th>
+                        <th>Platform(s)</th>
+                        <th>Engine version</th>
+                        <th>CSS grade</th>
+                      </tr>
+                    </tfoot> -->
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+    <!-- /.col -->
+</div>
+<!-- /.row -->
+<div class="row">
+  
+    <div class="col-xs-6">
+     <div class="box-body">
+                <div id="" style="height: 250px; width: 100%;">
+                    <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="map.options" control="map.control">
+                        <ui-gmap-markers models="map.markers" coords="'self'" options="'options'" isLabel='true' click="onClick">
+                        </ui-gmap-markers>
+                    </ui-gmap-google-map>
+                </div>
+            </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<!-- Small boxes (Stat box) -->
+<!-- /.row -->
+<!-- Main row -->
+<!-- /.row (main row) -->
+<div class="row">
+    <div class="col-md-12">
+        <h1>{{parking.name}} - {{parking.address}}</h1>
+        <h6>{{parking.email}}</h6>
+    </div>
+    <div class="col-md-12">
+        <!-- Horizontal Form -->
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Editar Estacionamiento</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form class="form-horizontal">
+                <div class="box-body">
+                    <div class="form-group">
+                        <label for="inputFirstName3" class="col-sm-2 control-label">Nombre</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputFirstName3" placeholder="Nombre" ng-model="parking.name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputUserName3" class="col-sm-2 control-label">Lugares Disponibles</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputUserName3" placeholder="Lugares Disponibles" ng-model="parking.availablePlaces">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputUserName3" class="col-sm-2 control-label">Lugares Totales</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputUserName3" placeholder="Lugares Totales" ng-model="parking.places">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputLastName3" class="col-sm-2 control-label">Descripcion</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputLastName3" placeholder="Descripcion" ng-model="parking.description">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputLastName3" class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputLastName3" placeholder="Email" ng-model="parking.email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputLastName3" class="col-sm-2 control-label">Dirección</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputLastName3" placeholder="Dirección" ng-model="parking.address">
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer">
+                    <button class="btn btn-block btn-success btn-sm" ng-click="saveEdit()"><i class="fa fa-save"></i> Guardar</button>
+                </div>
+                <!-- /.box-footer -->
+            </form>
+        </div>
+        <!-- /.box -->
+    </div>
+    <!-- /.box-body -->
+</div>
