@@ -9,6 +9,11 @@ app.factory("errorService", function ($rootScope, $cookies, Connection, SweetAle
 			} );
 	}
 
+	var _showError = function(error){
+		
+		SweetAlert.swal(error.title, error.msj, "error");
+		
+	}
 	var globalError = function(){
 		
 		SweetAlert.swal("Ups", "Se ha producido un error inesperado", "error");
@@ -34,7 +39,8 @@ app.factory("errorService", function ($rootScope, $cookies, Connection, SweetAle
 			return undefined;
 	}
 	return userService = {
-		manageError 	: _manageError
+		manageError 	: _manageError,
+		showError 	: _showError
 	}
 });
 

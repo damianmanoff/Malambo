@@ -1,4 +1,4 @@
-var app = angular.module('estacionando', ['ngRoute', "ngCookies", 'uiGmapgoogle-maps', 'datatables' ,'facebook', 'googlechart', 'daterangepicker', 'googleplus', 'oitozero.ngSweetAlert']);
+var app = angular.module('estacionando', ['ngRoute', "ngCookies", 'uiGmapgoogle-maps', 'datatables' ,'facebook', 'googlechart', 'daterangepicker', 'googleplus', 'oitozero.ngSweetAlert', 'angularTreeview']);
 
 app.config(['GooglePlusProvider', function(GooglePlusProvider) {
      
@@ -21,9 +21,9 @@ app.config(function($routeProvider, $locationProvider, FacebookProvider, GoogleP
             controller: 'LoginController',
             reloadOnSearch: false
         })
-        .when('/createUser/:parkingId', {
-            templateUrl: "src/views/createUser.html", 
-            controller: 'CreateUserController',
+        .when('/players', {
+            templateUrl: "src/views/players.html", 
+            controller: 'PlayerController',
             reloadOnSearch: false
         })
         .when('/createUser', {
@@ -98,10 +98,6 @@ function updateLeftasideBar($rootScope, $location, $cookieStore) {
     var isParkingUser = $cookieStore.get('isParkingUser');
     var isAdminUser = $cookieStore.get('isAdminUser');
 
-    console.log(loggedUser);
-    if (loggedUser == null) {
-        $location.path("/");
-    }
 
     $rootScope.$broadcast('LeftBarEvent');
     if (isParkingUser != null && isParkingUser == true) {
