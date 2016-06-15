@@ -5,13 +5,15 @@ app.controller('LoginController', function($scope, $rootScope, userService, park
     $rootScope.$broadcast('LoginScreenEvent');
     
     $scope.signIn = function() {
-        userService.login($scope).then(
+        userService.login($scope.userName, $scope.password).then(
             function(data) {
                 
-                if (data.sessionId == "-1"){
+                if (data.sessionId == "-1" || data.sessionId == "0"){
                     return errorService.showError({title : "Login Error", msj : "Login data is incorrect"});                        
                 }
-                $location.path("dashboard")
+                $cookieStore.put("navoriUser",data);
+                console.log($cookieStore);
+                $location.path("players")
 
                 /*group = {
                     action : "GetMedia",

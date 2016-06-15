@@ -32,7 +32,21 @@ class NavoriService():
         print(result)
         return JSONResponse(result, status=200)
 
+    @csrf_exempt
+    def getPlayers(self, request):
+        data = JSONParser().parse(request)
+        print(data)
+        result = navori.getPlayers(data["boxId"], data["managerId"], data["sessionId"])
+        print(result)
+        return JSONResponse(result, status=200)
 
+    @csrf_exempt
+    def getGroup(self, request):
+        data = JSONParser().parse(request)
+        print(data)
+        result = navori.getGroup(data["boxId"], data["managerId"], data["sessionId"])
+        print(result)
+        return JSONResponse(result, status=200)
 
 @csrf_exempt
 def checkNavori(request):

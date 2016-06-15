@@ -23,11 +23,11 @@ function aesEncryptedPassword(password) {
 app.factory("userService", function ($rootScope, $cookies, Connection, $cookieStore) {
 	
 
-	var _login = function(data){
+	var _login = function(userName, password){
 		return Connection.create("navori/login", 
 				{
-					userName : data.userName,
-					password : aesEncryptedPassword(data.password)
+					userName : userName,
+					password : aesEncryptedPassword(password)
 				}
 			);
 	}

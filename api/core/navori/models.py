@@ -14,7 +14,13 @@ class Navori:
     	return getattr(self.service.service, action)(*parameters)
 
     def login(self, userName, password):
+
     	return self.action("CheckLoginSDK", [userName, password])
 
+    def getPlayers(self, boxId, managerId, sessionId):
+    	return self.action("GetPlayer", [boxId, managerId, sessionId])
+
+    def getGroup(self, boxId, managerId, sessionId):
+    	return self.action("GetGroup", [boxId, managerId, sessionId])
 
 # Create your models here.
