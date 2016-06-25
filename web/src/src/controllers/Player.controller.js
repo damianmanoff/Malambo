@@ -19,12 +19,43 @@ app.controller('PlayerController', function($scope, $rootScope, $cookieStore, pa
 					$scope.players[i]["Id"] = "Player" + $scope.players[i].Id;
 					$scope.players[i]["label"] = $scope.players[i].Name;
 				}
+				$scope.getGroup();
 			},
 			function(error){
 				errorService.manageError(error, $scope);
 			});
+	}	
 
-		
+	$scope.getMedia = function(groupId){
+		var data = { 
+				groupId : groupId ,
+				managerId: $scope.user.manager.Id,
+				sessionId: $scope.user.sessionId
+		}
+
+		return Connection.create("navori/getMedia", data).then(
+			function(data){
+				console.log(data);
+			},
+			function(error){
+				errorService.manageError(error, $scope);
+			});
+	}
+
+	$scope.getTemplate = function(groupId){
+		var data = { 
+				groupId : groupId ,
+				managerId: $scope.user.manager.Id,
+				sessionId: $scope.user.sessionId
+		}
+
+		return Connection.create("navori/getTemplate", data).then(
+			function(data){
+				console.log(data);
+			},
+			function(error){
+				errorService.manageError(error, $scope);
+			});
 	}
 
 	function treeify(list, idAttr, parentAttr, childrenAttr) {
@@ -73,6 +104,7 @@ app.controller('PlayerController', function($scope, $rootScope, $cookieStore, pa
 				console.log($scope.groupArray.concat($scope.players));
 				var tree = $scope.marshallGroups($scope.groupArray.concat($scope.players));
 				$scope.treedata = tree;
+				
 			},
 			function(error){
 				errorService.manageError(error, $scope);
@@ -81,23 +113,29 @@ app.controller('PlayerController', function($scope, $rootScope, $cookieStore, pa
 		
 	}
 	
-	$scope.getPlayers().then($scope.getGroup());
+	$scope.getPlayers();
 	
 
 
 	$scope.treedata = 
-[
-	{ "label" : "User", "id" : "role1", "children" : [
-		{ "label" : "subUser1", "id" : "role11", "children" : [] },
-		{ "label" : "subUser2", "id" : "role12", "children" : [
-			{ "label" : "subUser2-1", "id" : "role121", "children" : [
-				{ "label" : "subUser2-1-1", "id" : "role1211", "children" : [] },
-				{ "label" : "subUser2-1-2", "id" : "role1212", "children" : [] }
+	[
+		{ "label" : "User", "id" : "role1", "children" : [
+			{ "label" : "subUser1", "id" : "role11", "children" : [] },
+			{ "label" : "subUser2", "id" : "role12", "children" : [
+				{ "label" : "subUser2-1", "id" : "role121", "children" : [
+					{ "label" : "subUser2-1-1", "id" : "role1211", "children" : [] },
+					{ "label" : "subUser2-1-2", "id" : "role1212", "children" : [] }
+				]}
 			]}
-		]}
-	]},
-	{ "label" : "Admin", "id" : "role2", "children" : [] },
-	{ "label" : "Guest", "id" : "role3", "children" : [] }
-];
+		]},
+		{ "label" : "Admin", "id" : "role2", "children" : [] },
+		{ "label" : "Guest", "id" : "role3", "children" : [] }
+	];
+
  	console.log($scope.treedata);
+ 	$scope.$watch('PlayersNode.currentNode.Name', function() {
+        $scope.getMedia($scope.PlayersNode.currentNode.Id);
+    });
+
+    
 });
