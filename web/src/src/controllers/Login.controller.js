@@ -12,20 +12,7 @@ app.controller('LoginController', function($scope, $rootScope, userService, park
                     return errorService.showError({title : "Login Error", msj : "Login data is incorrect"});                        
                 }
                 $cookieStore.put("navoriUser",data);
-                console.log($cookieStore);
                 $location.path("players")
-
-                /*group = {
-                    action : "GetMedia",
-                    parameters : [
-                        4,
-                        data.manager.Id,
-                        data.sessionId
-                        ]
-                }
-                console.log
-                Connection.create("navori", group ).then(function(groupData){console.log(groupData)});
-*/
             },
             function(error) {
                 errorService.manageError(error, $scope);

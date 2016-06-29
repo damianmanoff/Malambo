@@ -1,3 +1,24 @@
+var playerController = {
+	players : [],
+	Connection : null,
+	errorService: null,
+
+	getPlayers : function(data, callback, errorCallback){
+		return this.Connection.create("navori/getPlayers", data).then(
+		function(data){
+			playerController.players = data.listPlayer.View_Player;
+			if (callback != undefined)
+				callback(data);
+		},
+		function(error){
+			if (errorCallback != undefined)
+				errorCallback(error);
+			//playerController.errorService.manageError(error, $scope);
+		});
+	}
+
+}
+
 app.controller('PlayerController', function($scope, $rootScope, $cookieStore, parkingService, $location, errorService, $routeParams, priceService, logEntryService, promotionService,logEntryService, Connection) {
 	updateLeftasideBar($rootScope, $location, $cookieStore);
 	$scope.user = $cookieStore.get("navoriUser");
@@ -11,64 +32,26 @@ app.controller('PlayerController', function($scope, $rootScope, $cookieStore, pa
 				sessionId: $scope.user.sessionId
 		}
 
-		return Connection.create("navori/getPlayers", data).then(
-			function(data){
-				$scope.players = data.listPlayer.View_Player;
-				for( var i in $scope.players){
-					$scope.players[i]["ParentGroupId"] = $scope.players[i].GroupId;
-					$scope.players[i]["Id"] = "Player" + $scope.players[i].Id;
-					$scope.players[i]["label"] = $scope.players[i].Name;
-				}
-				$scope.getGroup();
-			},
-			function(error){
-				errorService.manageError(error, $scope);
-			});
+		var callbackError = function(error){
+			errorService.manageError(error, $scope);
+		}
+		var callback = function(){
+			$scope.players = playerController.players;
+			alert("entra");
+			console.log($scope.players);
+			for( var i in $scope.players){
+				$scope.players[i]["ParentGroupId"] = $scope.players[i].GroupId;
+				$scope.players[i]["Id"] = "Player" + $scope.players[i].Id;
+				$scope.players[i]["label"] = $scope.players[i].Name;
+			}
+			$scope.getGroup();
+		}
+		playerController.Connection = Connection;
+		return playerController.getPlayers(data, callback, callbackError);
 	}	
 
-	$scope.getMediaImages = function(){
-		return $scope.media.filter(function (el) {
-			return el.FolderName.indexOf("Imagenes") > -1;
-		});
-	}
-	$scope.getMediaTemplate = function(){
-		return $scope.media.filter(function (el) {
-			return el.FolderName.indexOf("Media & Template") > -1;
-		});
-	}
-	$scope.getMedia = function(groupId){
-		var data = { 
-				groupId : groupId ,
-				managerId: $scope.user.manager.Id,
-				sessionId: $scope.user.sessionId
-		}
 
-		return Connection.create("navori/getMedia", data).then(
-			function(data){
-				$scope.media = data.listMedia != "" ? data.listMedia.View_Media : [];
-				$scope.mediaTemplate = $scope.getMediaTemplate();
-				$scope.imagenes = $scope.getMediaImages();
-			},
-			function(error){
-				errorService.manageError(error, $scope);
-			});
-	}
 
-	$scope.getTemplate = function(groupId){
-		var data = { 
-				groupId : groupId ,
-				managerId: $scope.user.manager.Id,
-				sessionId: $scope.user.sessionId
-		}
-
-		return Connection.create("navori/getTemplate", data).then(
-			function(data){
-				console.log(data);
-			},
-			function(error){
-				errorService.manageError(error, $scope);
-			});
-	}
 
 	function treeify(list, idAttr, parentAttr, childrenAttr) {
 	    if (!idAttr) idAttr = 'id';
@@ -94,7 +77,6 @@ app.controller('PlayerController', function($scope, $rootScope, $cookieStore, pa
 	$scope.marshallGroups = function(groups){
 		if (groups == undefined)
 			return;
-		console.log("treeify");
 		return treeify(groups, "Id", "ParentGroupId", null );
 	}
 
@@ -111,9 +93,6 @@ app.controller('PlayerController', function($scope, $rootScope, $cookieStore, pa
 				for( var i in $scope.groupArray){
 					$scope.groupArray[i].label = $scope.groupArray[i].Name
 				}
-				console.log($scope.players);
-				console.log($scope.groupArray);
-				console.log($scope.groupArray.concat($scope.players));
 				var tree = $scope.marshallGroups($scope.groupArray.concat($scope.players));
 				$scope.treedata = tree;
 				
@@ -129,25 +108,11 @@ app.controller('PlayerController', function($scope, $rootScope, $cookieStore, pa
 	
 
 
-	$scope.treedata = 
-	[
-		{ "label" : "User", "id" : "role1", "children" : [
-			{ "label" : "subUser1", "id" : "role11", "children" : [] },
-			{ "label" : "subUser2", "id" : "role12", "children" : [
-				{ "label" : "subUser2-1", "id" : "role121", "children" : [
-					{ "label" : "subUser2-1-1", "id" : "role1211", "children" : [] },
-					{ "label" : "subUser2-1-2", "id" : "role1212", "children" : [] }
-				]}
-			]}
-		]},
-		{ "label" : "Admin", "id" : "role2", "children" : [] },
-		{ "label" : "Guest", "id" : "role3", "children" : [] }
-	];
+	$scope.treedata = [];
 
- 	console.log($scope.treedata);
  	$scope.$watch('PlayersNode.currentNode.Name', function() {
         if ($scope.PlayersNode.currentNode != undefined){
-        	$scope.getMedia($scope.PlayersNode.currentNode.Id);
+        	$rootScope.$broadcast('PlayerChange', $scope.PlayersNode.currentNode.Id);
         }
     });
 

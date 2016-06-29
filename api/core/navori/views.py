@@ -28,7 +28,6 @@ class NavoriService():
     def response(self, result, vartoCheck = None):
         status = 200
         if (vartoCheck != None):
-            print result[vartoCheck]
             status = (status , 400) [result[vartoCheck] == "DISCONNECTED"]
         return JSONResponse(result, status=status)
 
