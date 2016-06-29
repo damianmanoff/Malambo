@@ -24,13 +24,21 @@ navori = Navori()
 class NavoriService():
 
     # @detail_route(methods=['post'], url_path='login')
+
+    def response(self, result, vartoCheck = None):
+        status = 200
+        if (vartoCheck != None):
+            print result[vartoCheck]
+            status = (status , 400) [result[vartoCheck] == "DISCONNECTED"]
+        return JSONResponse(result, status=status)
+
     @csrf_exempt
     def login(self, request):
         data = JSONParser().parse(request)
         print(data)
         result = navori.login(data["userName"], data["password"])
         print(result)
-        return JSONResponse(result, status=200)
+        return self.response(result)
 
     @csrf_exempt
     def getPlayers(self, request):
@@ -38,7 +46,7 @@ class NavoriService():
         print(data)
         result = navori.getPlayers(data["boxId"], data["managerId"], data["sessionId"])
         print(result)
-        return JSONResponse(result, status=200)
+        return self.response(result, "GetPlayerResult")
 
     @csrf_exempt
     def getGroup(self, request):
@@ -46,7 +54,21 @@ class NavoriService():
         print(data)
         result = navori.getGroup(data["boxId"], data["managerId"], data["sessionId"])
         print(result)
-        return JSONResponse(result, status=200)
+        return self.response(result)
+    @csrf_exempt
+    def getMedia(self, request):
+        data = JSONParser().parse(request)
+        print(data)
+        result = navori.getMedia(data["groupId"], data["managerId"], data["sessionId"])
+        print(result)
+        return self.response(result)
+    @csrf_exempt
+    def getTemplate(self, request):
+        data = JSONParser().parse(request)
+        print(data)
+        result = navori.getTemplate(data["groupId"], data["managerId"], data["sessionId"])
+        print(result)
+        return self.response(result)
 
 @csrf_exempt
 def checkNavori(request):

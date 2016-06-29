@@ -16,6 +16,8 @@ urlpatterns = patterns('',
     url(r'^navori/$', views.checkNavori),
     url(r'^navori/login/$', nav.login),
     url(r'^navori/getPlayers/$', nav.getPlayers),
+    url(r'^navori/getMedia/$', nav.getMedia),
+    url(r'^navori/getTemplate/$', nav.getTemplate),
     url(r'^navori/getGroup/$', nav.getGroup),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))

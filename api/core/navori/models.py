@@ -23,4 +23,10 @@ class Navori:
     def getGroup(self, boxId, managerId, sessionId):
     	return self.action("GetGroup", [boxId, managerId, sessionId])
 
+    def getMedia(self, groupId, managerId, sessionId):
+    	return self.action("GetMedia", [groupId, managerId, sessionId])
+
+    def getTemplate(self, groupId, managerId, sessionId):
+    	return self.action("GetTemplate", [groupId, managerId, sessionId])
+
 # Create your models here.

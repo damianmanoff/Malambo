@@ -51,7 +51,13 @@
                                 </div>
                                 <!-- /.box-tools --> </div>
                             <!-- /.box-header -->
-                            <div class="box-body" style="display: block;">The body of the box</div>
+                            <div class="box-body" style="display: block;">
+                                <ul>
+                                    <li ng-repeat="myt in mediaTemplate">
+                                        {{myt.Name}}
+                                    </li>
+                                </ul>
+                            </div>
                             <!-- /.box-body --> </div>
                     </div>
                     <div class="row">
@@ -73,7 +79,7 @@
                 <div class="col-md-6">
                     <div class="box box-default">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Media & Templates</h3>
+                            <h3 class="box-title">Imagenes</h3>
                             <div class="box-tools pull-right">
                                 <button class="btn btn-box-tool" data-widget="collapse">
                                     <i class="fa fa-minus"></i>
@@ -82,11 +88,11 @@
                             <!-- /.box-tools --> </div>
                         <!-- /.box-header -->
                         <div class="box-body" style="display: block;">
-                            <div class="attachment-block clearfix">
-                                <img class="attachment-img" src="src/css/img/photo1.png" alt="attachment image">
+                            <div class="attachment-block clearfix" ng-repeat="img in imagenes">
+                                <img class="attachment-img" src="http://200.42.138.40/MediaUpload/{{img.MediaPath}}" alt="attachment image">
                                 <div class="attachment-pushed">
                                     <h4 class="attachment-heading">
-                                        <a href="http://www.lipsum.com/">Lorem ipsum text generator</a>
+                                        <a href="http://www.lipsum.com/">{{img.Name}}</a>
                                     </h4>
                                     <div class="attachment-text">
                                         Description about the attachment can be placed here.
@@ -95,19 +101,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="attachment-block clearfix">
-                                <img class="attachment-img" src="src/css/img/photo2.png" alt="attachment image">
-                                <div class="attachment-pushed">
-                                    <h4 class="attachment-heading">
-                                        <a href="http://www.lipsum.com/">Lorem ipsum text generator</a>
-                                    </h4>
-                                    <div class="attachment-text">
-                                        Description about the attachment can be placed here.
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry...
-                                        <a href="#">more</a>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                         <!-- /.box-body --> </div>
 
