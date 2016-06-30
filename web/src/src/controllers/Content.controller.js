@@ -19,6 +19,26 @@ app.controller('ContentController', function($scope, $rootScope, $cookieStore,  
 		});
 	}
 
+	$scope.getPath = function(name){
+		return "src/views/content/" + name + ".html"
+	}
+	$scope.getFolder = function(groupId){
+		var data = { 
+				groupId : groupId ,
+				managerId: $scope.user.manager.Id,
+				sessionId: $scope.user.sessionId
+		}
+
+		return Connection.create("navori/getFolder", data).then(
+			function(data){
+				$scope.folders = data.listFolder != "" ? data.listFolder.View_Folder : [];
+				console.log(data);
+			},
+			function(error){
+				errorService.manageError(error, $scope);
+			});
+	}
+
 	$scope.getMedia = function(groupId){
 		var data = { 
 				groupId : groupId ,
@@ -55,6 +75,7 @@ app.controller('ContentController', function($scope, $rootScope, $cookieStore,  
 	}
 
 	$scope.$on('PlayerChange', function(event, id) {
+		$scope.getFolder(id);
 		$scope.getMedia(id);
 	});
 });

@@ -48,6 +48,12 @@ class NavoriService():
         return self.response(result, "GetPlayerResult")
 
     @csrf_exempt
+    def getFolder(self, request):
+        data = JSONParser().parse(request)
+        result = navori.getFolder(data["groupId"], data["managerId"], data["sessionId"])
+        return self.response(result,"GetFolderResult")
+
+    @csrf_exempt
     def getGroup(self, request):
         data = JSONParser().parse(request)
         print(data)

@@ -27,6 +27,9 @@ class Navori:
     	return self.action("GetMedia", [groupId, managerId, sessionId])
 
     def getTemplate(self, groupId, managerId, sessionId):
-    	return self.action("GetTemplate", [groupId, managerId, sessionId])
+        return self.action("GetTemplate", [groupId, managerId, sessionId])
+    
+    def getFolder(self, groupId, managerId, sessionId):
+    	return self.action("GetFolder", [groupId, managerId, sessionId])
 
 # Create your models here.
