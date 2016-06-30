@@ -37,7 +37,7 @@ app.controller('PlayerController', function($scope, $rootScope, $cookieStore, pa
 		}
 		var callback = function(){
 			$scope.players = playerController.players;
-			alert("entra");
+			//alert("entra");
 			console.log($scope.players);
 			for( var i in $scope.players){
 				$scope.players[i]["ParentGroupId"] = $scope.players[i].GroupId;
