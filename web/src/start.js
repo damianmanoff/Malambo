@@ -3,7 +3,17 @@ var app = angular.module('estacionando', ['ngRoute', "ngCookies", 'uiGmapgoogle-
 app.config(['GooglePlusProvider', function(GooglePlusProvider) {
      
 }]);
+app.filter('range', function() {
+  return function(input, total) {
+    total = parseInt(total);
 
+    for (var i=0; i<total; i++) {
+      input.push(i);
+    }
+
+    return input;
+  };
+});
 app.config(function($routeProvider, $locationProvider, FacebookProvider, GooglePlusProvider) {
     FacebookProvider.init('219309365116364');     // For Testing
    // FacebookProvider.init('184077838639517');

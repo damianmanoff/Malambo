@@ -39,6 +39,10 @@ app.controller('ContentController', function($scope, $rootScope, $cookieStore,  
 			});
 	}
 
+	$scope.select = function(folder){
+		$scope.selected = folder;
+	}
+
 	$scope.getMedia = function(groupId){
 		var data = { 
 				groupId : groupId ,

@@ -34,17 +34,17 @@ class NavoriService():
     @csrf_exempt
     def login(self, request):
         data = JSONParser().parse(request)
-        print(data)
+        #print(data)
         result = navori.login(data["userName"], data["password"])
-        print(result)
+        #print(result)
         return self.response(result)
 
     @csrf_exempt
     def getPlayers(self, request):
         data = JSONParser().parse(request)
-        print(data)
+        #print(data)
         result = navori.getPlayers(data["boxId"], data["managerId"], data["sessionId"])
-        print(result)
+        #print(result)
         return self.response(result, "GetPlayerResult")
 
     @csrf_exempt
@@ -56,16 +56,16 @@ class NavoriService():
     @csrf_exempt
     def getGroup(self, request):
         data = JSONParser().parse(request)
-        print(data)
+        #print(data)
         result = navori.getGroup(data["boxId"], data["managerId"], data["sessionId"])
-        print(result)
+        #print(result)
         return self.response(result)
     @csrf_exempt
     def getMedia(self, request):
         data = JSONParser().parse(request)
-        print(data)
+        #print(data)
         result = navori.getMedia(data["groupId"], data["managerId"], data["sessionId"])
-        print(result)
+        #print(result)
         return self.response(result)
     @csrf_exempt
     def getTemplate(self, request):
@@ -73,6 +73,19 @@ class NavoriService():
         print(data)
         result = navori.getTemplate(data["groupId"], data["managerId"], data["sessionId"])
         print(result)
+        return self.response(result)
+
+    @csrf_exempt
+    def getPlaylist(self, request):
+        data = JSONParser().parse(request)
+        result = navori.getPlaylist(data["groupId"], data["managerId"], data["sessionId"])
+        print(result)
+        return self.response(result)
+
+    @csrf_exempt
+    def getPlaylistComponent(self, request):
+        data = JSONParser().parse(request)
+        result = navori.getPlaylistComponent(data["playlistId"], data["groupId"], data["managerId"], data["sessionId"])
         return self.response(result)
 
 @csrf_exempt

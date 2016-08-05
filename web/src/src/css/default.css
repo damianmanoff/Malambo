@@ -87,3 +87,10 @@ p {
 @media (min-width: 960px) {
 
 }
+
+.planning-hour{
+    height: 58px;
+    background-color: antiquewhite;
+    width: 34px;
+    border: 1px solid black;
+}

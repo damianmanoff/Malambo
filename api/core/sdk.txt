@@ -1,0 +1,1113 @@
+
+Suds ( https://fedorahosted.org/suds/ )  version: 0.6
+
+Service ( NavoriService ) tns="http://tempuri.org/"
+   Prefixes (6)
+      ns0 = "http://schemas.datacontract.org/2004/07/NavoriWebService"
+      ns1 = "http://schemas.datacontract.org/2004/07/System.Data"
+      ns2 = "http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses"
+      ns3 = "http://schemas.microsoft.com/2003/10/Serialization/"
+      ns4 = "http://schemas.microsoft.com/2003/10/Serialization/Arrays"
+      ns5 = "http://tempuri.org/"
+   Ports (5):
+      (BasicHttpBinding_ManagerService)
+         Methods (209):
+            AddAttachedFile(ns0:AttachedFile attachedFile, xs:long managerId, xs:string sessionId)
+            AddBox(ns0:View_Box box, xs:long managerId, xs:string sessionId)
+            AddBoxGroup(xs:long boxId, ns4:ArrayOflong enableGroupId, ns4:ArrayOflong disableGroupId, xs:long managerId, xs:string sessionId)
+            AddCategory(ns0:Category category, xs:long managerId, xs:string sessionId)
+            AddFolder(ns0:View_Folder folder, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            AddGroup(ns0:View_Group group, xs:long boxId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            AddManager(ns0:View_Manager manager, xs:long managerId, xs:string sessionId)
+            AddManagerAlert(ns0:ManagerAlert managerAlert, xs:long managerId, xs:string sessionId)
+            AddManagerEvent(ns0:ManagerEvent managerEvent, xs:long managerId, xs:string sessionId)
+            AddManagerProfil(ns0:ManagerProfil managerProfil, xs:long managerId, xs:string sessionId)
+            AddManagerWindow(ns0:ArrayOfManagerWindow listManagerWindow, xs:long managerId, xs:string sessionId)
+            AddMarker(ns0:Marker marker, xs:long routeId)
+            AddMarkerMedia(ns0:MarkerMedia markerMedia)
+            AddMedia(ns0:View_Media media, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            AddMonitoringFilter(ns0:MonitoringFilter monitoringFilter, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            AddPlayerProfil(ns0:PlayerProfil playerProfil, xs:long managerId, xs:string sessionId)
+            AddPlaylist(ns0:View_Playlist playlist, xs:long groupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            AddPlaylistBanner(ns0:View_PlaylistBanner playlistBanner, xs:long groupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            AddPlaylistComponent(ns0:View_PlaylistComponent playlistComponent, xs:long groupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            AddPlaylistComponentFromFolder(xs:long playlistId, xs:string folderDetail, xs:string typeDetail, xs:boolean isBanner, xs:int order, xs:long groupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            AddQLLog(xs:string message, xs:long managerId, xs:string sessionId)
+            AddRoute(ns0:Route route)
+            AddRouteMarker(ns0:RouteMarker routeMarker)
+            AddSchedule(ns0:View_ScheduleList schedule, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            AddTemplateMedia(ns0:View_TemplateMedia templateMedia, xs:long managerId, xs:string sessionId)
+            AddUpdateFilter(ns0:UpdateFilter updateFilter, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            AddXMLMedia(ns0:XMLMedia xmlMedia, ns0:ArrayOfXMLFeed listXmlFeed, xs:long managerId, xs:string sessionId)
+            CheckBanner247(xs:long groupId, xs:long managerId, xs:string sessionId)
+            CheckKey(xs:string login, xs:string password, xs:string key)
+            CheckLogin(xs:string login, xs:string password, xs:long now, xs:boolean isExpress)
+            CheckLoginSDK(xs:string login, xs:string password)
+            CheckServerVersion()
+            CheckUploadForExpress(xs:long managerId, xs:string sessionId)
+            CheckWindowsDomain(xs:string domainName)
+            CheckWindowsUser(xs:string userName)
+            CheckZonePlaylist(xs:long templateId, xs:long playlistId, xs:long managerId, xs:string sessionId)
+            CloseGPSWindows(xs:long managerId, xs:string sessionId)
+            Closetemplate(xs:long objectId, xs:boolean isTemplate, xs:long managerId, xs:string sessionId)
+            CopyBanner(ns0:View_Banner banner, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            CopyMedia(ns0:View_Media media, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            CopyPlaylist(ns0:View_Playlist playlist, xs:long groupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            CopyScheduleByDate(xs:long groupId, xs:long dateBeginCopy, xs:long dateEndCopy, xs:long dateBeginPast, xs:long dateEndPast, ns4:ArrayOflong listScheduleId, xs:boolean erase, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            CopyTemplate(ns0:View_Template template, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            DeleteAllPlayerAlert(ns4:ArrayOflong listPlayerId, xs:long managerId, xs:string sessionId)
+            DeleteAllPlayerScreen(xs:long playerId, xs:long managerId, xs:string sessionId)
+            DeleteAllPlaylistBanner(xs:long playlistId, xs:long groupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            DeleteAllPlaylistComponent(xs:long playlistId, xs:long groupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            DeleteAttachedFile(ns0:AttachedFile attachedFile, xs:long managerId, xs:string sessionId)
+            DeleteBanner(xs:long bannerId, xs:long groupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            DeleteBox(xs:long boxId, xs:long managerId, xs:string sessionId)
+            DeleteBoxGroup(xs:long boxGroupId, xs:long managerId, xs:string sessionId)
+            DeleteCategory(xs:long categoryId, xs:long managerId, xs:string sessionId)
+            DeleteFolder(xs:long folderId, xs:long groupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            DeleteGroup(xs:long groupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            DeleteManager(xs:long todeleteId, xs:long managerId, xs:string sessionId)
+            DeleteManagerAlert(xs:long managerAlertId, xs:long managerId, xs:string sessionId)
+            DeleteManagerEvent(xs:long managerEventId, xs:long managerId, xs:string sessionId)
+            DeleteManagerProfil(xs:long ManagerProfilId, xs:long managerId, xs:string sessionId)
+            DeleteMarker(xs:long markerId)
+            DeleteMarkerMedia(xs:long markerId, xs:long mediaId)
+            DeleteMedia(ns0:View_Media media, xs:long groupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            DeleteMonitoringFilter(xs:long monitoringFilterId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            DeletePlayer(xs:long playerId, xs:string serialNumber, xs:long managerId, xs:string sessionId)
+            DeletePlayerProfil(xs:long playerProfilId, xs:long managerId, xs:string sessionId)
+            DeletePlaylist(xs:long playlistId, xs:long groupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            DeletePlaylistBanner(xs:long playlistBannerId, xs:long groupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            DeletePlaylistBannerById(xs:long playlistId, ns4:ArrayOflong listPlaylistBannerId, xs:long groupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            DeletePlaylistComponent(xs:long playlistComponentId, xs:long groupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            DeletePlaylistComponentById(xs:long playlistId, ns4:ArrayOflong listPlaylistComponentId, xs:long groupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            DeleteRoute(xs:long routeId)
+            DeleteRouteMarker(xs:long routeId, xs:long markerId)
+            DeleteSchedule(xs:long scheduleId, xs:long groupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            DeleteScheduleByDate(xs:long groupId, xs:long dateBegin, xs:long dateEnd, xs:long hourBegin, xs:long hourEnd, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            DeleteTemplate(xs:long templateId, xs:long groupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            DeleteTemplateMedia(xs:long templateMediaId, xs:long managerId, xs:string sessionId)
+            DeleteUpdateFilter(xs:long updateFilterId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            DeleteXMLMedia(xs:long xmlMediaId, xs:long managerId, xs:string sessionId)
+            DisconnectAll(xs:string pass, xs:long id)
+            DoServerUpdate()
+            EnableBox(xs:long boxId, xs:boolean isEnable, xs:long managerId, xs:string sessionId)
+            GetAttachedFile(xs:long mediaId, xs:long managerId, xs:string sessionId)
+            GetBanner(xs:long groupId, xs:long managerId, xs:string sessionId)
+            GetBox(xs:long managerId, xs:string sessionId)
+            GetBoxFiltered(xs:long parentBoxId, xs:string filter, xs:long managerId, xs:string sessionId)
+            GetBoxGroup(ns4:ArrayOflong listBoxId, xs:long managerId, xs:string sessionId)
+            GetCategory(xs:long boxId, xs:long managerId, xs:string sessionId)
+            GetComingLogMediaData(ns4:ArrayOflong listGroupId, xs:long dateBegin, xs:long managerId, xs:string sessionId)
+            GetCount()
+            GetCountry(xs:long managerId, xs:string sessionId)
+            GetFilteredBanner(xs:long groupId, xs:string filter, xs:long managerId, xs:string sessionId)
+            GetFilteredGroup(xs:string filter, xs:long managerId, xs:string sessionId)
+            GetFilteredGroup2(xs:string filter, xs:long managerId, xs:string sessionId)
+            GetFilteredGroup3(xs:string filter, xs:long managerId, xs:string sessionId)
+            GetFilteredMedia(xs:long groupId, xs:string filter, xs:long managerId, xs:string sessionId)
+            GetFilteredPlayer(xs:string filter, xs:long managerId, xs:string sessionId)
+            GetFilteredPlayer2(xs:string filter, xs:long managerId, xs:string sessionId)
+            GetFilteredRoute(xs:string filter)
+            GetFilteredTemplate(xs:long groupId, xs:string filter, xs:long managerId, xs:string sessionId)
+            GetFilteredTemplateMedia(xs:long groupId, xs:long typeId, xs:string filter, xs:long managerId, xs:string sessionId)
+            GetFolder(xs:long groupId, xs:long managerId, xs:string sessionId)
+            GetFonts(xs:long managerId, xs:string sessionId)
+            GetGroup(xs:long boxId, xs:long managerId, xs:string sessionId)
+            GetHTMLFile(ns0:View_Media media, xs:long managerId, xs:string sessionId)
+            GetLogMedia(ns4:ArrayOflong playerId, xs:long dayBegin, xs:long dayEnd, xs:string mediaName1, xs:string mediaName2, xs:string customerName1, xs:string customerName2, xs:string advertisingReference1, xs:string advertisingReference2, xs:boolean isGrouped, xs:boolean isCut, xs:long managerId, xs:string sessionId)
+            GetLogMediaExcel(ns4:ArrayOflong playerId, xs:long dayBegin, xs:long dayEnd, xs:string mediaName1, xs:string mediaName2, xs:string customerName1, xs:string customerName2, xs:string advertisingReference1, xs:string advertisingReference2, xs:boolean isGrouped, xs:boolean isCut, xs:long managerId, xs:string sessionId)
+            GetLogMediaSVC(ns4:ArrayOflong playerId, xs:long dayBegin, xs:long dayEnd, xs:string mediaName1, xs:string mediaName2, xs:string customerName1, xs:string customerName2, xs:string advertisingReference1, xs:string advertisingReference2, xs:boolean isGrouped, xs:boolean isCut, xs:long managerId, xs:string sessionId)
+            GetManager(xs:long boxId, xs:long managerId, xs:string sessionId)
+            GetManagerAlert(xs:long managerId, xs:string sessionId)
+            GetManagerEvent(xs:long managerId, xs:string sessionId)
+            GetManagerIpRestriction(xs:long id, xs:long managerId, xs:string sessionId)
+            GetManagerProfil(xs:long managerId, xs:string sessionId)
+            GetManagerWindow(xs:long managerId, xs:string sessionId)
+            GetMarker()
+            GetMarkerMedia(xs:long markerId)
+            GetMedia(xs:long groupId, xs:long managerId, xs:string sessionId)
+            GetMediaExtention(xs:long managerId, xs:string sessionId)
+            GetMediaPeriod(xs:long typeId, xs:long mediaId, xs:long managerId, xs:string sessionId)
+            GetMonitoringFilter(xs:long boxId, xs:long managerId, xs:string sessionId)
+            GetPlayer(xs:long boxId, xs:long managerId, xs:string sessionId)
+            GetPlayerAlert(xs:long dateBegin, xs:long dateEnd, xs:long playerId, xs:long managerId, xs:string sessionId)
+            GetPlayerEvent(xs:long dateBegin, xs:long dateEnd, xs:long playerId, xs:long managerId, xs:string sessionId)
+            GetPlayerProfil(xs:long managerId, xs:string sessionId)
+            GetPlayerProfilScreen(xs:long playerProfilId, xs:long managerId, xs:string sessionId)
+            GetPlayerSettings(xs:long playerId, xs:int playerVersion)
+            GetPlayerStatus(xs:long lastMonitoring, xs:long managerId, xs:string sessionId)
+            GetPlaylist(ns4:ArrayOflong groupId, xs:long managerId, xs:string sessionId)
+            GetPlaylistBanner(xs:long playlistId, xs:long managerId, xs:string sessionId)
+            GetPlaylistComponent(xs:long playlistId, xs:long groupId, xs:long managerId, xs:string sessionId)
+            GetPlaylistManagerRight(xs:long playlistId, xs:long boxId, xs:long managerId, xs:string sessionId)
+            GetRoute()
+            GetRouteMarker(xs:long routeId)
+            GetSchedule(xs:long groupId, xs:long dateBegin, xs:long dateEnd, xs:long managerId, xs:string sessionId)
+            GetServerSetting()
+            GetTVFeed(ns4:ArrayOflong listPlayerId, xs:long managerId, xs:string sessionId)
+            GetTagByBoxId(xs:long boxId, xs:long managerId, xs:string sessionId)
+            GetTagByMediaId(xs:long mediaId, xs:long typeId, xs:long managerId, xs:string sessionId)
+            GetTagByPlayerId(xs:long playerId, xs:long managerId, xs:string sessionId)
+            GetTemplate(xs:long groupId, xs:long managerId, xs:string sessionId)
+            GetTemplateMedia(xs:long groupId, xs:long typeId, xs:long managerId, xs:string sessionId)
+            GetTimeZone(xs:long managerId, xs:string sessionId)
+            GetTwitterApp()
+            GetUSBZip(xs:long managerId, ns4:ArrayOflong listGroupId)
+            GetUSBZipSQLite(xs:long managerId, ns4:ArrayOflong listGroupId)
+            GetUpdateFilter(xs:long boxId, xs:long managerId, xs:string sessionId)
+            GetUserBySessionId(xs:string sessionId)
+            GetXML(xs:int xmlType, xs:string path, xs:long managerId, xs:string sessionId)
+            GetXMLFeed(xs:long mediaId, xs:long managerId, xs:string sessionId)
+            GetXMLMedia(xs:long groupId, xs:long managerId, xs:string sessionId)
+            GetXMLMediaData(xs:long xmlMediaId, xs:long managerId, xs:string sessionId)
+            GetXMLMediaFeed(xs:long groupId, xs:long managerId, xs:string sessionId)
+            GetXMLMediaTitle(xs:long xmlMediaId, xs:long managerId, xs:string sessionId)
+            GetZonesBanner(xs:long bannerId, xs:long managerId, xs:string sessionId)
+            GetZonesTemplate(xs:long templateId, xs:long managerId, xs:string sessionId)
+            HaveUSBExport(xs:long managerId, xs:long boxId)
+            IsWindowsAuthentication()
+            OpenGPSWindows(xs:long managerId, xs:string sessionId)
+            Opentemplate(xs:long objectId, xs:boolean isTemplate, xs:long managerId, xs:string sessionId)
+            RefreshGPSWindows(xs:long managerId, xs:string sessionId)
+            ResetPlayer(xs:long groupId, xs:long playerId, xs:string serialNumber, xs:long managerId, xs:string sessionId)
+            SendRefreshAlert(xs:long groupId, xs:long managerId, xs:string sessionId)
+            SendRefreshFromDB(xs:long GroupId, xs:string Type, xs:string Zone, xs:anyType navoriObject, xs:long managerId, xs:long ObjectId)
+            SetManagerIpRestriction(ns0:ArrayOfManagerIpRestriction listManagerIpRestriction, xs:long managerId, xs:string sessionId)
+            SetManagerZoomPercent(xs:decimal zoomPercent, xs:long managerId, xs:string sessionId)
+            SetMediaPeriod(ns0:ArrayOfView_MediaPeriod listMediaPeriod, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            SetPlayerProfilScreen(ns0:ArrayOfPlayerProfilScreen listPlayerProfilScreen, xs:long managerId, xs:string sessionId)
+            SetPlayerScreen(ns0:ArrayOfPlayerScreen listPlayerScreen, xs:long managerId, xs:string sessionId)
+            SetPlayerSpecificContent(ns0:ArrayOfView_PlayerSpecificContent listPlayerSpecificContent, xs:long managerId, xs:string sessionId)
+            SetPlayerStatus(ns4:ArrayOflong listPlayerId, xs:int methodeTypeId, xs:int optionTypeId, xs:long date, xs:long time, xs:long managerId, xs:string sessionId)
+            SetPlaylistManagerRight(ns0:ArrayOfView_PlaylistManagerRight listPlaylistManagerRight, xs:long managerId, xs:string sessionId)
+            SetSchedule(xs:long groupId, ns0:ArrayOfView_ScheduleList listSchedule, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            SetTagwordToMedia(ns0:ArrayOfView_TagwordMedia listTagwordMedia, xs:long managerId, xs:string sessionId)
+            SetTagwordToPlayer(ns0:ArrayOfView_TagwordPlayer listTagwordPlayer, xs:long managerId, xs:string sessionId)
+            SetTwitterApp(ns0:ArrayOfTwitterApp listTwitterApp)
+            SetXMLMediaData(ns0:ArrayOfXMLMediaData listXmlMediaData, xs:long managerId, xs:string sessionId)
+            SetXMLMediaTitle(ns0:XMLMediaTitle xmlMediaTitle, xs:long managerId, xs:string sessionId)
+            SetZonesBanner(ns0:View_Banner banner, ns0:ArrayOfView_ZoneShape listZoneShape, ns0:ArrayOfView_ZoneTemplateMedia listZoneTemplateMedia, ns0:ArrayOfView_ZoneText listZoneText, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            SetZonesTemplate(ns0:View_Template template, ns0:ArrayOfView_ZonePlaylist listZonePlaylist, ns0:ArrayOfView_ZoneMedia listZoneMedia, ns0:ArrayOfView_ZoneText listZoneText, ns0:ArrayOfView_ZoneShape listZoneShape, ns0:ArrayOfView_ZoneTemplateMedia listZoneTemplateMedia, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            TestSendMail(xs:string UserName, xs:string Password, xs:string smtp, xs:string fromEmail, xs:string name, xs:string toEmail, xs:string port, xs:boolean EnableSsl, xs:string subject, xs:string body, xs:long managerId, xs:string sessionId)
+            UpdateBanner(ns0:View_Banner banner, xs:long oldGroupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            UpdateBox(ns0:View_Box box, xs:long managerId, xs:string sessionId)
+            UpdateBoxGroup(ns0:BoxGroup boxGroup, xs:long managerId, xs:string sessionId)
+            UpdateCategory(ns0:Category category, xs:long managerId, xs:string sessionId)
+            UpdateFolder(ns0:View_Folder folder, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            UpdateGroup(ns0:View_Group group, xs:long profilId, ns4:ArrayOflong listPlayerId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            UpdateManager(ns0:View_Manager manager, xs:long managerId, xs:string sessionId)
+            UpdateManagerAlert(ns0:ManagerAlert managerAlert, xs:long managerId, xs:string sessionId)
+            UpdateManagerEvent(ns0:ManagerEvent managerEvent, xs:long managerId, xs:string sessionId)
+            UpdateManagerProfil(ns0:ManagerProfil managerProfil, xs:long managerId, xs:string sessionId)
+            UpdateMarker(ns0:Marker marker)
+            UpdateMedia(ns0:View_Media media, xs:long oldGroupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            UpdateMonitoringFilter(ns0:MonitoringFilter monitoringFilter, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            UpdatePlayer(ns0:View_Player player, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            UpdatePlayerAlert(ns0:ArrayOfView_ManagerPlayerAlert listPlayerAlert, xs:long managerId, xs:string sessionId)
+            UpdatePlayerProfil(ns0:PlayerProfil playerProfil, xs:long managerId, xs:string sessionId)
+            UpdatePlaylist(ns0:View_Playlist playlist, xs:long groupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            UpdatePlaylistBanner(ns0:View_PlaylistBanner playlistBanner, xs:long groupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            UpdatePlaylistComponent(ns0:View_PlaylistComponent playlistComponent, xs:long groupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            UpdateRoute(ns0:Route route)
+            UpdateRouteMarker(ns0:RouteMarker routeMarker)
+            UpdateSchedule(ns0:View_ScheduleList schedule, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            UpdateServerSetting(ns0:View_ServerSetting serverSetting, xs:long managerId, xs:string sessionId)
+            UpdateTemplate(ns0:View_Template template, xs:long oldGroupId, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            UpdateTemplateMedia(ns0:View_TemplateMedia templateMedia, xs:long managerId, xs:string sessionId)
+            UpdateThumbMedia(xs:string oldThumbMedia, xs:string newThumbMedia)
+            UpdateUpdateFilter(ns0:UpdateFilter updateFilter, xs:base64Binary navoriObject, xs:long managerId, xs:string sessionId)
+            UpdateXMLMedia(ns0:XMLMedia xmlMedia, ns0:ArrayOfXMLFeed listXmlFeed, ns4:ArrayOflong deletedId, xs:long managerId, xs:string sessionId)
+            UpdateXMLMediaName(ns0:XMLMedia media, xs:long managerId, xs:string sessionId)
+            UploadFile(xs:string SafeFileName, xs:long groupId, xs:boolean isFirst, xs:boolean isLast, xs:base64Binary buffer, xs:long managerId, xs:string sessionId)
+            UploadMedia(xs:string SafeFileName, xs:long groupId, xs:boolean isFirst, xs:boolean isLast, xs:base64Binary buffer, xs:long managerId, xs:string sessionId)
+         Types (155):
+            ns0:ArrayOfAttachedFile
+            ns0:ArrayOfBanner
+            ns0:ArrayOfBoxGroup
+            ns0:ArrayOfCategory
+            ns0:ArrayOfCountry
+            ns1:ArrayOfEntityKeyMember
+            ns4:ArrayOfKeyValueOflonglong
+            ns0:ArrayOfLogMedia
+            ns0:ArrayOfManagerAlert
+            ns0:ArrayOfManagerEvent
+            ns0:ArrayOfManagerIpRestriction
+            ns0:ArrayOfManagerProfil
+            ns0:ArrayOfManagerWindow
+            ns0:ArrayOfMarker
+            ns0:ArrayOfMarkerMedia
+            ns0:ArrayOfMedia
+            ns0:ArrayOfMediaExtension
+            ns0:ArrayOfMonitoringFilter
+            ns0:ArrayOfPlayerCodecGraphics
+            ns0:ArrayOfPlayerPerformance
+            ns0:ArrayOfPlayerProfil
+            ns0:ArrayOfPlayerProfilScreen
+            ns0:ArrayOfPlayerScreen
+            ns0:ArrayOfPlayerSpecificContent
+            ns0:ArrayOfPlaylist
+            ns0:ArrayOfPlaylistBanner
+            ns0:ArrayOfPlaylistComponent
+            ns0:ArrayOfRoute
+            ns0:ArrayOfRouteMarker
+            ns0:ArrayOfTVFeed
+            ns0:ArrayOfTagword
+            ns0:ArrayOfTemplateMedia
+            ns0:ArrayOfTimeZone
+            ns0:ArrayOfTwitterApp
+            ns0:ArrayOfUpdateFilter
+            ns0:ArrayOfView_Banner
+            ns0:ArrayOfView_Box
+            ns0:ArrayOfView_Folder
+            ns0:ArrayOfView_Group
+            ns0:ArrayOfView_LogMedia
+            ns0:ArrayOfView_Manager
+            ns0:ArrayOfView_ManagerPlayerAlert
+            ns0:ArrayOfView_ManagerPlayerEvent
+            ns0:ArrayOfView_Media
+            ns0:ArrayOfView_MediaPeriod
+            ns0:ArrayOfView_Player
+            ns0:ArrayOfView_PlayerAddOn
+            ns0:ArrayOfView_PlayerCodecGraphics
+            ns0:ArrayOfView_PlayerPerformance
+            ns0:ArrayOfView_PlayerSpecificContent
+            ns0:ArrayOfView_Playlist
+            ns0:ArrayOfView_PlaylistBanner
+            ns0:ArrayOfView_PlaylistComponent
+            ns0:ArrayOfView_PlaylistComponentFull
+            ns0:ArrayOfView_PlaylistManagerRight
+            ns0:ArrayOfView_ScheduleList
+            ns0:ArrayOfView_StatusM
+            ns0:ArrayOfView_TagwordMedia
+            ns0:ArrayOfView_TagwordPlayer
+            ns0:ArrayOfView_Template
+            ns0:ArrayOfView_TemplateMedia
+            ns0:ArrayOfView_XMLMedia_Feed
+            ns0:ArrayOfView_ZoneMedia
+            ns0:ArrayOfView_ZonePlaylist
+            ns0:ArrayOfView_ZoneShape
+            ns0:ArrayOfView_ZoneTemplateMedia
+            ns0:ArrayOfView_ZoneText
+            ns0:ArrayOfXMLFeed
+            ns0:ArrayOfXMLMedia
+            ns0:ArrayOfXMLMediaData
+            ns0:ArrayOfXMLMediaTitle
+            ns4:ArrayOfboolean
+            ns4:ArrayOflong
+            ns4:ArrayOfstring
+            ns0:AttachedFile
+            ns0:Banner
+            ns0:BoxGroup
+            ns0:Category
+            ns0:Country
+            ns1:EntityKey
+            ns1:EntityKeyMember
+            ns2:EntityObject
+            ns0:ErrorType
+            ns0:LogMedia
+            ns0:ManagerAlert
+            ns0:ManagerEvent
+            ns0:ManagerIpRestriction
+            ns0:ManagerProfil
+            ns0:ManagerStatus
+            ns0:ManagerWindow
+            ns0:Marker
+            ns0:MarkerMedia
+            ns0:Media
+            ns0:MediaExtension
+            ns0:MonitoringFilter
+            ns0:NavoriFeedExport
+            ns0:PlayerCodecGraphics
+            ns0:PlayerPerformance
+            ns0:PlayerProfil
+            ns0:PlayerProfilScreen
+            ns0:PlayerScreen
+            ns0:PlayerSpecificContent
+            ns0:Playlist
+            ns0:PlaylistBanner
+            ns0:PlaylistComponent
+            ns0:Route
+            ns0:RouteMarker
+            ns2:StructuralObject
+            ns0:TVFeed
+            ns0:Tagword
+            ns0:TemplateMedia
+            ns0:TimeZone
+            ns0:TwitterApp
+            ns0:UpdateFilter
+            ns0:View_Banner
+            ns0:View_Box
+            ns0:View_Folder
+            ns0:View_Group
+            ns0:View_LogMedia
+            ns0:View_Manager
+            ns0:View_ManagerPlayerAlert
+            ns0:View_ManagerPlayerEvent
+            ns0:View_Media
+            ns0:View_MediaPeriod
+            ns0:View_Player
+            ns0:View_PlayerAddOn
+            ns0:View_PlayerCodecGraphics
+            ns0:View_PlayerPerformance
+            ns0:View_PlayerSpecificContent
+            ns0:View_PlayerStatus
+            ns0:View_Playlist
+            ns0:View_PlaylistBanner
+            ns0:View_PlaylistComponent
+            ns0:View_PlaylistComponentFull
+            ns0:View_PlaylistManagerRight
+            ns0:View_ScheduleList
+            ns0:View_ServerSetting
+            ns0:View_StatusM
+            ns0:View_TagwordMedia
+            ns0:View_TagwordPlayer
+            ns0:View_Template
+            ns0:View_TemplateMedia
+            ns0:View_XMLMedia_Feed
+            ns0:View_ZoneMedia
+            ns0:View_ZonePlaylist
+            ns0:View_ZoneShape
+            ns0:View_ZoneTemplateMedia
+            ns0:View_ZoneText
+            ns0:XMLFeed
+            ns0:XMLMedia
+            ns0:XMLMediaData
+            ns0:XMLMediaTitle
+            ns3:char
+            ns3:duration
+            ns3:guid
+      (PollingDuplexHttpBinding_ManagerDuplexService)
+         Methods (2):
+            Notify(xs:long managerId, xs:string sessionId)
+            ReceiveRefresh()
+         Types (155):
+            ns0:ArrayOfAttachedFile
+            ns0:ArrayOfBanner
+            ns0:ArrayOfBoxGroup
+            ns0:ArrayOfCategory
+            ns0:ArrayOfCountry
+            ns1:ArrayOfEntityKeyMember
+            ns4:ArrayOfKeyValueOflonglong
+            ns0:ArrayOfLogMedia
+            ns0:ArrayOfManagerAlert
+            ns0:ArrayOfManagerEvent
+            ns0:ArrayOfManagerIpRestriction
+            ns0:ArrayOfManagerProfil
+            ns0:ArrayOfManagerWindow
+            ns0:ArrayOfMarker
+            ns0:ArrayOfMarkerMedia
+            ns0:ArrayOfMedia
+            ns0:ArrayOfMediaExtension
+            ns0:ArrayOfMonitoringFilter
+            ns0:ArrayOfPlayerCodecGraphics
+            ns0:ArrayOfPlayerPerformance
+            ns0:ArrayOfPlayerProfil
+            ns0:ArrayOfPlayerProfilScreen
+            ns0:ArrayOfPlayerScreen
+            ns0:ArrayOfPlayerSpecificContent
+            ns0:ArrayOfPlaylist
+            ns0:ArrayOfPlaylistBanner
+            ns0:ArrayOfPlaylistComponent
+            ns0:ArrayOfRoute
+            ns0:ArrayOfRouteMarker
+            ns0:ArrayOfTVFeed
+            ns0:ArrayOfTagword
+            ns0:ArrayOfTemplateMedia
+            ns0:ArrayOfTimeZone
+            ns0:ArrayOfTwitterApp
+            ns0:ArrayOfUpdateFilter
+            ns0:ArrayOfView_Banner
+            ns0:ArrayOfView_Box
+            ns0:ArrayOfView_Folder
+            ns0:ArrayOfView_Group
+            ns0:ArrayOfView_LogMedia
+            ns0:ArrayOfView_Manager
+            ns0:ArrayOfView_ManagerPlayerAlert
+            ns0:ArrayOfView_ManagerPlayerEvent
+            ns0:ArrayOfView_Media
+            ns0:ArrayOfView_MediaPeriod
+            ns0:ArrayOfView_Player
+            ns0:ArrayOfView_PlayerAddOn
+            ns0:ArrayOfView_PlayerCodecGraphics
+            ns0:ArrayOfView_PlayerPerformance
+            ns0:ArrayOfView_PlayerSpecificContent
+            ns0:ArrayOfView_Playlist
+            ns0:ArrayOfView_PlaylistBanner
+            ns0:ArrayOfView_PlaylistComponent
+            ns0:ArrayOfView_PlaylistComponentFull
+            ns0:ArrayOfView_PlaylistManagerRight
+            ns0:ArrayOfView_ScheduleList
+            ns0:ArrayOfView_StatusM
+            ns0:ArrayOfView_TagwordMedia
+            ns0:ArrayOfView_TagwordPlayer
+            ns0:ArrayOfView_Template
+            ns0:ArrayOfView_TemplateMedia
+            ns0:ArrayOfView_XMLMedia_Feed
+            ns0:ArrayOfView_ZoneMedia
+            ns0:ArrayOfView_ZonePlaylist
+            ns0:ArrayOfView_ZoneShape
+            ns0:ArrayOfView_ZoneTemplateMedia
+            ns0:ArrayOfView_ZoneText
+            ns0:ArrayOfXMLFeed
+            ns0:ArrayOfXMLMedia
+            ns0:ArrayOfXMLMediaData
+            ns0:ArrayOfXMLMediaTitle
+            ns4:ArrayOfboolean
+            ns4:ArrayOflong
+            ns4:ArrayOfstring
+            ns0:AttachedFile
+            ns0:Banner
+            ns0:BoxGroup
+            ns0:Category
+            ns0:Country
+            ns1:EntityKey
+            ns1:EntityKeyMember
+            ns2:EntityObject
+            ns0:ErrorType
+            ns0:LogMedia
+            ns0:ManagerAlert
+            ns0:ManagerEvent
+            ns0:ManagerIpRestriction
+            ns0:ManagerProfil
+            ns0:ManagerStatus
+            ns0:ManagerWindow
+            ns0:Marker
+            ns0:MarkerMedia
+            ns0:Media
+            ns0:MediaExtension
+            ns0:MonitoringFilter
+            ns0:NavoriFeedExport
+            ns0:PlayerCodecGraphics
+            ns0:PlayerPerformance
+            ns0:PlayerProfil
+            ns0:PlayerProfilScreen
+            ns0:PlayerScreen
+            ns0:PlayerSpecificContent
+            ns0:Playlist
+            ns0:PlaylistBanner
+            ns0:PlaylistComponent
+            ns0:Route
+            ns0:RouteMarker
+            ns2:StructuralObject
+            ns0:TVFeed
+            ns0:Tagword
+            ns0:TemplateMedia
+            ns0:TimeZone
+            ns0:TwitterApp
+            ns0:UpdateFilter
+            ns0:View_Banner
+            ns0:View_Box
+            ns0:View_Folder
+            ns0:View_Group
+            ns0:View_LogMedia
+            ns0:View_Manager
+            ns0:View_ManagerPlayerAlert
+            ns0:View_ManagerPlayerEvent
+            ns0:View_Media
+            ns0:View_MediaPeriod
+            ns0:View_Player
+            ns0:View_PlayerAddOn
+            ns0:View_PlayerCodecGraphics
+            ns0:View_PlayerPerformance
+            ns0:View_PlayerSpecificContent
+            ns0:View_PlayerStatus
+            ns0:View_Playlist
+            ns0:View_PlaylistBanner
+            ns0:View_PlaylistComponent
+            ns0:View_PlaylistComponentFull
+            ns0:View_PlaylistManagerRight
+            ns0:View_ScheduleList
+            ns0:View_ServerSetting
+            ns0:View_StatusM
+            ns0:View_TagwordMedia
+            ns0:View_TagwordPlayer
+            ns0:View_Template
+            ns0:View_TemplateMedia
+            ns0:View_XMLMedia_Feed
+            ns0:View_ZoneMedia
+            ns0:View_ZonePlaylist
+            ns0:View_ZoneShape
+            ns0:View_ZoneTemplateMedia
+            ns0:View_ZoneText
+            ns0:XMLFeed
+            ns0:XMLMedia
+            ns0:XMLMediaData
+            ns0:XMLMediaTitle
+            ns3:char
+            ns3:duration
+            ns3:guid
+      (WSHttpBinding_WatchDogService)
+         Methods (33):
+            AddTVFeed(xs:string SerialNumber, ns4:ArrayOfstring TVFeedName)
+            CheckConnection()
+            CheckPlayerVersion(xs:string SerialNumber, xs:string Version)
+            CheckSerial(xs:string SerialNumber, xs:string MacAddress, ns0:ArrayOfPlayerPerformance Performance, ns0:ArrayOfPlayerCodecGraphics Codec, xs:string Version, xs:boolean isShort, xs:string PlayerName)
+            DownloadMediaPaquet(xs:string MediaPath, xs:long PaquetSize, xs:int IndexPaquet, xs:boolean IsLast)
+            GetBannerData(xs:string SerialNumber, xs:long DateBegin, xs:long DateEnd, ns0:ArrayOfPlaylistBanner ListPlaylistBanner, xs:string version, ns0:ArrayOfBanner ListBanner, ns0:ArrayOfView_ZoneShape ListZoneShapes, ns0:ArrayOfView_ZoneText ListZoneText, ns0:ArrayOfView_ZoneTemplateMedia ListZoneTemplateMedia, ns0:ArrayOfTemplateMedia ListTemplateMedia, ns0:ArrayOfXMLMedia ListXmlMedia, ns0:ArrayOfXMLFeed ListXmlFeed, ns0:ArrayOfXMLMediaData ListxmlMediaData)
+            GetDBPath(xs:string SerialNumber)
+            GetGPSData(xs:string routeName, ns0:ArrayOfRoute ListRoute, ns0:ArrayOfMarker ListMarker, ns0:ArrayOfRouteMarker ListRouteMarker, ns0:ArrayOfMarkerMedia ListMarkerMedia, ns0:ArrayOfMedia ListMedia)
+            GetIsUpdated(xs:string SerialNumber, xs:long Date, xs:long Time, xs:boolean isUpdated, xs:int statusType)
+            GetMediaForPLayer(xs:long MediaId, xs:long DateBegin, xs:long DateEnd, ns4:ArrayOfstring listPlayerSerialNumber)
+            GetNPK(xs:string SerialNumber, xs:string MacAddress, xs:boolean isShort)
+            GetPlayerData(xs:string SerialNumber, ns0:PlayerProfil playerProfil, ns0:ArrayOfPlayerScreen playerScreenList, ns0:ArrayOfPlayerProfilScreen playerProfilScreenList, ns0:View_PlayerStatus playerStatus, ns0:ArrayOfTwitterApp twitterAppList, ns0:ArrayOfView_TagwordPlayer tagPlayerList)
+            GetPlayerForInstall(xs:string Login, xs:string Password)
+            GetScheduleData(xs:string SerialNumber, xs:long DateBegin, xs:long DateEnd, xs:string version, ns0:ArrayOfView_ScheduleList ListSchedule, ns0:ArrayOfPlaylist ListPlaylist, ns0:ArrayOfPlaylistComponent ListPlayListComponent, ns0:ArrayOfPlaylistBanner ListPlaylistBanner, ns0:ArrayOfMedia ListMedia, ns0:ArrayOfView_Template ListTemplate, ns0:ArrayOfView_ZoneMedia ListZoneMedia, ns0:ArrayOfView_ZonePlaylist ListZonePlayList, ns0:ArrayOfView_ZoneText ListZoneText, ns0:ArrayOfView_MediaPeriod ListMediaPeriod, ns0:ArrayOfTemplateMedia ListTemplateMedia, ns0:ArrayOfPlayerSpecificContent ListPlayerSpecificContent, ns0:ArrayOfXMLMedia ListXmlMedia, ns0:ArrayOfXMLFeed ListXmlFeed, ns0:ArrayOfXMLMediaData ListxmlMediaData, ns0:ArrayOfAttachedFile ListAttachedFile, ns0:ArrayOfView_ZoneShape ListZoneShape, ns0:ArrayOfView_ZoneTemplateMedia ListZoneTemplateMedia, ns0:ArrayOfView_TagwordMedia ListTagMedia)
+            GetServerDate()
+            GetServerTime()
+            GetServerVersion()
+            GetXMLDBPath(xs:string SerialNumber)
+            GetXMLMediaForPLayer(xs:string SerialNumber, xs:long DateBegin, xs:long DateEnd, ns0:ArrayOfXMLMedia ListXmlMedia, ns0:ArrayOfXMLFeed ListXmlFeed, ns0:ArrayOfXMLMediaData ListxmlMediaData)
+            NotifyConnexion(xs:string SerialNumber, xs:long Date, xs:long Time, xs:long ScreenEnd, xs:long ScreenBegin)
+            NotifyDownload(xs:string SerialNumber, xs:long Date, xs:long Time, xs:int DownloadPercent)
+            NotifyIsAlive(xs:string SerialNumber, xs:long Date, xs:long Time, xs:boolean isUpdated, xs:int statusType)
+            NotifyPlaylist(xs:string SerialNumber, xs:long Date, xs:long Time, xs:long CurentPlaylistId, xs:string PlaylistName)
+            NotifyUpdate(xs:string SerialNumber, xs:long Date, xs:long Time, xs:boolean IsUpdated, xs:int status)
+            SendAlert(xs:string SerialNumber, xs:long errorId, xs:int day, xs:long hour, xs:string message, xs:string Source)
+            SendDiskSpace(xs:string SerialNumber, xs:int day, xs:long hour, xs:double OsSpace, xs:double ContentSpace)
+            SendEvent(xs:string SerialNumber, xs:long errorId, xs:int day, xs:long hour, xs:string message)
+            SendLogMedia(xs:string SerialNumber, xs:int day, xs:string mediaName, xs:boolean bDetail, xs:int X, xs:int Y, xs:int W, xs:int H, xs:long hourBegin, xs:long hourEnd)
+            SendLogMediaList(xs:string SerialNumber, ns0:ArrayOfLogMedia ListLogMedia)
+            SetPlayerIp(xs:string SerialNumber, xs:string Ip)
+            SetPlayerVersion(xs:string SerialNumber, xs:string Version, xs:int ResolutionWidth, xs:int ResolutionHeight)
+            SharedClass(ns0:NavoriFeedExport param)
+            notifyRS232(xs:string SerialNumber, xs:string RSstatus, xs:int colorId)
+         Types (155):
+            ns0:ArrayOfAttachedFile
+            ns0:ArrayOfBanner
+            ns0:ArrayOfBoxGroup
+            ns0:ArrayOfCategory
+            ns0:ArrayOfCountry
+            ns1:ArrayOfEntityKeyMember
+            ns4:ArrayOfKeyValueOflonglong
+            ns0:ArrayOfLogMedia
+            ns0:ArrayOfManagerAlert
+            ns0:ArrayOfManagerEvent
+            ns0:ArrayOfManagerIpRestriction
+            ns0:ArrayOfManagerProfil
+            ns0:ArrayOfManagerWindow
+            ns0:ArrayOfMarker
+            ns0:ArrayOfMarkerMedia
+            ns0:ArrayOfMedia
+            ns0:ArrayOfMediaExtension
+            ns0:ArrayOfMonitoringFilter
+            ns0:ArrayOfPlayerCodecGraphics
+            ns0:ArrayOfPlayerPerformance
+            ns0:ArrayOfPlayerProfil
+            ns0:ArrayOfPlayerProfilScreen
+            ns0:ArrayOfPlayerScreen
+            ns0:ArrayOfPlayerSpecificContent
+            ns0:ArrayOfPlaylist
+            ns0:ArrayOfPlaylistBanner
+            ns0:ArrayOfPlaylistComponent
+            ns0:ArrayOfRoute
+            ns0:ArrayOfRouteMarker
+            ns0:ArrayOfTVFeed
+            ns0:ArrayOfTagword
+            ns0:ArrayOfTemplateMedia
+            ns0:ArrayOfTimeZone
+            ns0:ArrayOfTwitterApp
+            ns0:ArrayOfUpdateFilter
+            ns0:ArrayOfView_Banner
+            ns0:ArrayOfView_Box
+            ns0:ArrayOfView_Folder
+            ns0:ArrayOfView_Group
+            ns0:ArrayOfView_LogMedia
+            ns0:ArrayOfView_Manager
+            ns0:ArrayOfView_ManagerPlayerAlert
+            ns0:ArrayOfView_ManagerPlayerEvent
+            ns0:ArrayOfView_Media
+            ns0:ArrayOfView_MediaPeriod
+            ns0:ArrayOfView_Player
+            ns0:ArrayOfView_PlayerAddOn
+            ns0:ArrayOfView_PlayerCodecGraphics
+            ns0:ArrayOfView_PlayerPerformance
+            ns0:ArrayOfView_PlayerSpecificContent
+            ns0:ArrayOfView_Playlist
+            ns0:ArrayOfView_PlaylistBanner
+            ns0:ArrayOfView_PlaylistComponent
+            ns0:ArrayOfView_PlaylistComponentFull
+            ns0:ArrayOfView_PlaylistManagerRight
+            ns0:ArrayOfView_ScheduleList
+            ns0:ArrayOfView_StatusM
+            ns0:ArrayOfView_TagwordMedia
+            ns0:ArrayOfView_TagwordPlayer
+            ns0:ArrayOfView_Template
+            ns0:ArrayOfView_TemplateMedia
+            ns0:ArrayOfView_XMLMedia_Feed
+            ns0:ArrayOfView_ZoneMedia
+            ns0:ArrayOfView_ZonePlaylist
+            ns0:ArrayOfView_ZoneShape
+            ns0:ArrayOfView_ZoneTemplateMedia
+            ns0:ArrayOfView_ZoneText
+            ns0:ArrayOfXMLFeed
+            ns0:ArrayOfXMLMedia
+            ns0:ArrayOfXMLMediaData
+            ns0:ArrayOfXMLMediaTitle
+            ns4:ArrayOfboolean
+            ns4:ArrayOflong
+            ns4:ArrayOfstring
+            ns0:AttachedFile
+            ns0:Banner
+            ns0:BoxGroup
+            ns0:Category
+            ns0:Country
+            ns1:EntityKey
+            ns1:EntityKeyMember
+            ns2:EntityObject
+            ns0:ErrorType
+            ns0:LogMedia
+            ns0:ManagerAlert
+            ns0:ManagerEvent
+            ns0:ManagerIpRestriction
+            ns0:ManagerProfil
+            ns0:ManagerStatus
+            ns0:ManagerWindow
+            ns0:Marker
+            ns0:MarkerMedia
+            ns0:Media
+            ns0:MediaExtension
+            ns0:MonitoringFilter
+            ns0:NavoriFeedExport
+            ns0:PlayerCodecGraphics
+            ns0:PlayerPerformance
+            ns0:PlayerProfil
+            ns0:PlayerProfilScreen
+            ns0:PlayerScreen
+            ns0:PlayerSpecificContent
+            ns0:Playlist
+            ns0:PlaylistBanner
+            ns0:PlaylistComponent
+            ns0:Route
+            ns0:RouteMarker
+            ns2:StructuralObject
+            ns0:TVFeed
+            ns0:Tagword
+            ns0:TemplateMedia
+            ns0:TimeZone
+            ns0:TwitterApp
+            ns0:UpdateFilter
+            ns0:View_Banner
+            ns0:View_Box
+            ns0:View_Folder
+            ns0:View_Group
+            ns0:View_LogMedia
+            ns0:View_Manager
+            ns0:View_ManagerPlayerAlert
+            ns0:View_ManagerPlayerEvent
+            ns0:View_Media
+            ns0:View_MediaPeriod
+            ns0:View_Player
+            ns0:View_PlayerAddOn
+            ns0:View_PlayerCodecGraphics
+            ns0:View_PlayerPerformance
+            ns0:View_PlayerSpecificContent
+            ns0:View_PlayerStatus
+            ns0:View_Playlist
+            ns0:View_PlaylistBanner
+            ns0:View_PlaylistComponent
+            ns0:View_PlaylistComponentFull
+            ns0:View_PlaylistManagerRight
+            ns0:View_ScheduleList
+            ns0:View_ServerSetting
+            ns0:View_StatusM
+            ns0:View_TagwordMedia
+            ns0:View_TagwordPlayer
+            ns0:View_Template
+            ns0:View_TemplateMedia
+            ns0:View_XMLMedia_Feed
+            ns0:View_ZoneMedia
+            ns0:View_ZonePlaylist
+            ns0:View_ZoneShape
+            ns0:View_ZoneTemplateMedia
+            ns0:View_ZoneText
+            ns0:XMLFeed
+            ns0:XMLMedia
+            ns0:XMLMediaData
+            ns0:XMLMediaTitle
+            ns3:char
+            ns3:duration
+            ns3:guid
+      (BasicHttpBinding_WatchDogService)
+         Methods (33):
+            AddTVFeed(xs:string SerialNumber, ns4:ArrayOfstring TVFeedName)
+            CheckConnection()
+            CheckPlayerVersion(xs:string SerialNumber, xs:string Version)
+            CheckSerial(xs:string SerialNumber, xs:string MacAddress, ns0:ArrayOfPlayerPerformance Performance, ns0:ArrayOfPlayerCodecGraphics Codec, xs:string Version, xs:boolean isShort, xs:string PlayerName)
+            DownloadMediaPaquet(xs:string MediaPath, xs:long PaquetSize, xs:int IndexPaquet, xs:boolean IsLast)
+            GetBannerData(xs:string SerialNumber, xs:long DateBegin, xs:long DateEnd, ns0:ArrayOfPlaylistBanner ListPlaylistBanner, xs:string version, ns0:ArrayOfBanner ListBanner, ns0:ArrayOfView_ZoneShape ListZoneShapes, ns0:ArrayOfView_ZoneText ListZoneText, ns0:ArrayOfView_ZoneTemplateMedia ListZoneTemplateMedia, ns0:ArrayOfTemplateMedia ListTemplateMedia, ns0:ArrayOfXMLMedia ListXmlMedia, ns0:ArrayOfXMLFeed ListXmlFeed, ns0:ArrayOfXMLMediaData ListxmlMediaData)
+            GetDBPath(xs:string SerialNumber)
+            GetGPSData(xs:string routeName, ns0:ArrayOfRoute ListRoute, ns0:ArrayOfMarker ListMarker, ns0:ArrayOfRouteMarker ListRouteMarker, ns0:ArrayOfMarkerMedia ListMarkerMedia, ns0:ArrayOfMedia ListMedia)
+            GetIsUpdated(xs:string SerialNumber, xs:long Date, xs:long Time, xs:boolean isUpdated, xs:int statusType)
+            GetMediaForPLayer(xs:long MediaId, xs:long DateBegin, xs:long DateEnd, ns4:ArrayOfstring listPlayerSerialNumber)
+            GetNPK(xs:string SerialNumber, xs:string MacAddress, xs:boolean isShort)
+            GetPlayerData(xs:string SerialNumber, ns0:PlayerProfil playerProfil, ns0:ArrayOfPlayerScreen playerScreenList, ns0:ArrayOfPlayerProfilScreen playerProfilScreenList, ns0:View_PlayerStatus playerStatus, ns0:ArrayOfTwitterApp twitterAppList, ns0:ArrayOfView_TagwordPlayer tagPlayerList)
+            GetPlayerForInstall(xs:string Login, xs:string Password)
+            GetScheduleData(xs:string SerialNumber, xs:long DateBegin, xs:long DateEnd, xs:string version, ns0:ArrayOfView_ScheduleList ListSchedule, ns0:ArrayOfPlaylist ListPlaylist, ns0:ArrayOfPlaylistComponent ListPlayListComponent, ns0:ArrayOfPlaylistBanner ListPlaylistBanner, ns0:ArrayOfMedia ListMedia, ns0:ArrayOfView_Template ListTemplate, ns0:ArrayOfView_ZoneMedia ListZoneMedia, ns0:ArrayOfView_ZonePlaylist ListZonePlayList, ns0:ArrayOfView_ZoneText ListZoneText, ns0:ArrayOfView_MediaPeriod ListMediaPeriod, ns0:ArrayOfTemplateMedia ListTemplateMedia, ns0:ArrayOfPlayerSpecificContent ListPlayerSpecificContent, ns0:ArrayOfXMLMedia ListXmlMedia, ns0:ArrayOfXMLFeed ListXmlFeed, ns0:ArrayOfXMLMediaData ListxmlMediaData, ns0:ArrayOfAttachedFile ListAttachedFile, ns0:ArrayOfView_ZoneShape ListZoneShape, ns0:ArrayOfView_ZoneTemplateMedia ListZoneTemplateMedia, ns0:ArrayOfView_TagwordMedia ListTagMedia)
+            GetServerDate()
+            GetServerTime()
+            GetServerVersion()
+            GetXMLDBPath(xs:string SerialNumber)
+            GetXMLMediaForPLayer(xs:string SerialNumber, xs:long DateBegin, xs:long DateEnd, ns0:ArrayOfXMLMedia ListXmlMedia, ns0:ArrayOfXMLFeed ListXmlFeed, ns0:ArrayOfXMLMediaData ListxmlMediaData)
+            NotifyConnexion(xs:string SerialNumber, xs:long Date, xs:long Time, xs:long ScreenEnd, xs:long ScreenBegin)
+            NotifyDownload(xs:string SerialNumber, xs:long Date, xs:long Time, xs:int DownloadPercent)
+            NotifyIsAlive(xs:string SerialNumber, xs:long Date, xs:long Time, xs:boolean isUpdated, xs:int statusType)
+            NotifyPlaylist(xs:string SerialNumber, xs:long Date, xs:long Time, xs:long CurentPlaylistId, xs:string PlaylistName)
+            NotifyUpdate(xs:string SerialNumber, xs:long Date, xs:long Time, xs:boolean IsUpdated, xs:int status)
+            SendAlert(xs:string SerialNumber, xs:long errorId, xs:int day, xs:long hour, xs:string message, xs:string Source)
+            SendDiskSpace(xs:string SerialNumber, xs:int day, xs:long hour, xs:double OsSpace, xs:double ContentSpace)
+            SendEvent(xs:string SerialNumber, xs:long errorId, xs:int day, xs:long hour, xs:string message)
+            SendLogMedia(xs:string SerialNumber, xs:int day, xs:string mediaName, xs:boolean bDetail, xs:int X, xs:int Y, xs:int W, xs:int H, xs:long hourBegin, xs:long hourEnd)
+            SendLogMediaList(xs:string SerialNumber, ns0:ArrayOfLogMedia ListLogMedia)
+            SetPlayerIp(xs:string SerialNumber, xs:string Ip)
+            SetPlayerVersion(xs:string SerialNumber, xs:string Version, xs:int ResolutionWidth, xs:int ResolutionHeight)
+            SharedClass(ns0:NavoriFeedExport param)
+            notifyRS232(xs:string SerialNumber, xs:string RSstatus, xs:int colorId)
+         Types (155):
+            ns0:ArrayOfAttachedFile
+            ns0:ArrayOfBanner
+            ns0:ArrayOfBoxGroup
+            ns0:ArrayOfCategory
+            ns0:ArrayOfCountry
+            ns1:ArrayOfEntityKeyMember
+            ns4:ArrayOfKeyValueOflonglong
+            ns0:ArrayOfLogMedia
+            ns0:ArrayOfManagerAlert
+            ns0:ArrayOfManagerEvent
+            ns0:ArrayOfManagerIpRestriction
+            ns0:ArrayOfManagerProfil
+            ns0:ArrayOfManagerWindow
+            ns0:ArrayOfMarker
+            ns0:ArrayOfMarkerMedia
+            ns0:ArrayOfMedia
+            ns0:ArrayOfMediaExtension
+            ns0:ArrayOfMonitoringFilter
+            ns0:ArrayOfPlayerCodecGraphics
+            ns0:ArrayOfPlayerPerformance
+            ns0:ArrayOfPlayerProfil
+            ns0:ArrayOfPlayerProfilScreen
+            ns0:ArrayOfPlayerScreen
+            ns0:ArrayOfPlayerSpecificContent
+            ns0:ArrayOfPlaylist
+            ns0:ArrayOfPlaylistBanner
+            ns0:ArrayOfPlaylistComponent
+            ns0:ArrayOfRoute
+            ns0:ArrayOfRouteMarker
+            ns0:ArrayOfTVFeed
+            ns0:ArrayOfTagword
+            ns0:ArrayOfTemplateMedia
+            ns0:ArrayOfTimeZone
+            ns0:ArrayOfTwitterApp
+            ns0:ArrayOfUpdateFilter
+            ns0:ArrayOfView_Banner
+            ns0:ArrayOfView_Box
+            ns0:ArrayOfView_Folder
+            ns0:ArrayOfView_Group
+            ns0:ArrayOfView_LogMedia
+            ns0:ArrayOfView_Manager
+            ns0:ArrayOfView_ManagerPlayerAlert
+            ns0:ArrayOfView_ManagerPlayerEvent
+            ns0:ArrayOfView_Media
+            ns0:ArrayOfView_MediaPeriod
+            ns0:ArrayOfView_Player
+            ns0:ArrayOfView_PlayerAddOn
+            ns0:ArrayOfView_PlayerCodecGraphics
+            ns0:ArrayOfView_PlayerPerformance
+            ns0:ArrayOfView_PlayerSpecificContent
+            ns0:ArrayOfView_Playlist
+            ns0:ArrayOfView_PlaylistBanner
+            ns0:ArrayOfView_PlaylistComponent
+            ns0:ArrayOfView_PlaylistComponentFull
+            ns0:ArrayOfView_PlaylistManagerRight
+            ns0:ArrayOfView_ScheduleList
+            ns0:ArrayOfView_StatusM
+            ns0:ArrayOfView_TagwordMedia
+            ns0:ArrayOfView_TagwordPlayer
+            ns0:ArrayOfView_Template
+            ns0:ArrayOfView_TemplateMedia
+            ns0:ArrayOfView_XMLMedia_Feed
+            ns0:ArrayOfView_ZoneMedia
+            ns0:ArrayOfView_ZonePlaylist
+            ns0:ArrayOfView_ZoneShape
+            ns0:ArrayOfView_ZoneTemplateMedia
+            ns0:ArrayOfView_ZoneText
+            ns0:ArrayOfXMLFeed
+            ns0:ArrayOfXMLMedia
+            ns0:ArrayOfXMLMediaData
+            ns0:ArrayOfXMLMediaTitle
+            ns4:ArrayOfboolean
+            ns4:ArrayOflong
+            ns4:ArrayOfstring
+            ns0:AttachedFile
+            ns0:Banner
+            ns0:BoxGroup
+            ns0:Category
+            ns0:Country
+            ns1:EntityKey
+            ns1:EntityKeyMember
+            ns2:EntityObject
+            ns0:ErrorType
+            ns0:LogMedia
+            ns0:ManagerAlert
+            ns0:ManagerEvent
+            ns0:ManagerIpRestriction
+            ns0:ManagerProfil
+            ns0:ManagerStatus
+            ns0:ManagerWindow
+            ns0:Marker
+            ns0:MarkerMedia
+            ns0:Media
+            ns0:MediaExtension
+            ns0:MonitoringFilter
+            ns0:NavoriFeedExport
+            ns0:PlayerCodecGraphics
+            ns0:PlayerPerformance
+            ns0:PlayerProfil
+            ns0:PlayerProfilScreen
+            ns0:PlayerScreen
+            ns0:PlayerSpecificContent
+            ns0:Playlist
+            ns0:PlaylistBanner
+            ns0:PlaylistComponent
+            ns0:Route
+            ns0:RouteMarker
+            ns2:StructuralObject
+            ns0:TVFeed
+            ns0:Tagword
+            ns0:TemplateMedia
+            ns0:TimeZone
+            ns0:TwitterApp
+            ns0:UpdateFilter
+            ns0:View_Banner
+            ns0:View_Box
+            ns0:View_Folder
+            ns0:View_Group
+            ns0:View_LogMedia
+            ns0:View_Manager
+            ns0:View_ManagerPlayerAlert
+            ns0:View_ManagerPlayerEvent
+            ns0:View_Media
+            ns0:View_MediaPeriod
+            ns0:View_Player
+            ns0:View_PlayerAddOn
+            ns0:View_PlayerCodecGraphics
+            ns0:View_PlayerPerformance
+            ns0:View_PlayerSpecificContent
+            ns0:View_PlayerStatus
+            ns0:View_Playlist
+            ns0:View_PlaylistBanner
+            ns0:View_PlaylistComponent
+            ns0:View_PlaylistComponentFull
+            ns0:View_PlaylistManagerRight
+            ns0:View_ScheduleList
+            ns0:View_ServerSetting
+            ns0:View_StatusM
+            ns0:View_TagwordMedia
+            ns0:View_TagwordPlayer
+            ns0:View_Template
+            ns0:View_TemplateMedia
+            ns0:View_XMLMedia_Feed
+            ns0:View_ZoneMedia
+            ns0:View_ZonePlaylist
+            ns0:View_ZoneShape
+            ns0:View_ZoneTemplateMedia
+            ns0:View_ZoneText
+            ns0:XMLFeed
+            ns0:XMLMedia
+            ns0:XMLMediaData
+            ns0:XMLMediaTitle
+            ns3:char
+            ns3:duration
+            ns3:guid
+      (WSHttpBinding_WatchDogService1)
+         Methods (33):
+            AddTVFeed(xs:string SerialNumber, ns4:ArrayOfstring TVFeedName)
+            CheckConnection()
+            CheckPlayerVersion(xs:string SerialNumber, xs:string Version)
+            CheckSerial(xs:string SerialNumber, xs:string MacAddress, ns0:ArrayOfPlayerPerformance Performance, ns0:ArrayOfPlayerCodecGraphics Codec, xs:string Version, xs:boolean isShort, xs:string PlayerName)
+            DownloadMediaPaquet(xs:string MediaPath, xs:long PaquetSize, xs:int IndexPaquet, xs:boolean IsLast)
+            GetBannerData(xs:string SerialNumber, xs:long DateBegin, xs:long DateEnd, ns0:ArrayOfPlaylistBanner ListPlaylistBanner, xs:string version, ns0:ArrayOfBanner ListBanner, ns0:ArrayOfView_ZoneShape ListZoneShapes, ns0:ArrayOfView_ZoneText ListZoneText, ns0:ArrayOfView_ZoneTemplateMedia ListZoneTemplateMedia, ns0:ArrayOfTemplateMedia ListTemplateMedia, ns0:ArrayOfXMLMedia ListXmlMedia, ns0:ArrayOfXMLFeed ListXmlFeed, ns0:ArrayOfXMLMediaData ListxmlMediaData)
+            GetDBPath(xs:string SerialNumber)
+            GetGPSData(xs:string routeName, ns0:ArrayOfRoute ListRoute, ns0:ArrayOfMarker ListMarker, ns0:ArrayOfRouteMarker ListRouteMarker, ns0:ArrayOfMarkerMedia ListMarkerMedia, ns0:ArrayOfMedia ListMedia)
+            GetIsUpdated(xs:string SerialNumber, xs:long Date, xs:long Time, xs:boolean isUpdated, xs:int statusType)
+            GetMediaForPLayer(xs:long MediaId, xs:long DateBegin, xs:long DateEnd, ns4:ArrayOfstring listPlayerSerialNumber)
+            GetNPK(xs:string SerialNumber, xs:string MacAddress, xs:boolean isShort)
+            GetPlayerData(xs:string SerialNumber, ns0:PlayerProfil playerProfil, ns0:ArrayOfPlayerScreen playerScreenList, ns0:ArrayOfPlayerProfilScreen playerProfilScreenList, ns0:View_PlayerStatus playerStatus, ns0:ArrayOfTwitterApp twitterAppList, ns0:ArrayOfView_TagwordPlayer tagPlayerList)
+            GetPlayerForInstall(xs:string Login, xs:string Password)
+            GetScheduleData(xs:string SerialNumber, xs:long DateBegin, xs:long DateEnd, xs:string version, ns0:ArrayOfView_ScheduleList ListSchedule, ns0:ArrayOfPlaylist ListPlaylist, ns0:ArrayOfPlaylistComponent ListPlayListComponent, ns0:ArrayOfPlaylistBanner ListPlaylistBanner, ns0:ArrayOfMedia ListMedia, ns0:ArrayOfView_Template ListTemplate, ns0:ArrayOfView_ZoneMedia ListZoneMedia, ns0:ArrayOfView_ZonePlaylist ListZonePlayList, ns0:ArrayOfView_ZoneText ListZoneText, ns0:ArrayOfView_MediaPeriod ListMediaPeriod, ns0:ArrayOfTemplateMedia ListTemplateMedia, ns0:ArrayOfPlayerSpecificContent ListPlayerSpecificContent, ns0:ArrayOfXMLMedia ListXmlMedia, ns0:ArrayOfXMLFeed ListXmlFeed, ns0:ArrayOfXMLMediaData ListxmlMediaData, ns0:ArrayOfAttachedFile ListAttachedFile, ns0:ArrayOfView_ZoneShape ListZoneShape, ns0:ArrayOfView_ZoneTemplateMedia ListZoneTemplateMedia, ns0:ArrayOfView_TagwordMedia ListTagMedia)
+            GetServerDate()
+            GetServerTime()
+            GetServerVersion()
+            GetXMLDBPath(xs:string SerialNumber)
+            GetXMLMediaForPLayer(xs:string SerialNumber, xs:long DateBegin, xs:long DateEnd, ns0:ArrayOfXMLMedia ListXmlMedia, ns0:ArrayOfXMLFeed ListXmlFeed, ns0:ArrayOfXMLMediaData ListxmlMediaData)
+            NotifyConnexion(xs:string SerialNumber, xs:long Date, xs:long Time, xs:long ScreenEnd, xs:long ScreenBegin)
+            NotifyDownload(xs:string SerialNumber, xs:long Date, xs:long Time, xs:int DownloadPercent)
+            NotifyIsAlive(xs:string SerialNumber, xs:long Date, xs:long Time, xs:boolean isUpdated, xs:int statusType)
+            NotifyPlaylist(xs:string SerialNumber, xs:long Date, xs:long Time, xs:long CurentPlaylistId, xs:string PlaylistName)
+            NotifyUpdate(xs:string SerialNumber, xs:long Date, xs:long Time, xs:boolean IsUpdated, xs:int status)
+            SendAlert(xs:string SerialNumber, xs:long errorId, xs:int day, xs:long hour, xs:string message, xs:string Source)
+            SendDiskSpace(xs:string SerialNumber, xs:int day, xs:long hour, xs:double OsSpace, xs:double ContentSpace)
+            SendEvent(xs:string SerialNumber, xs:long errorId, xs:int day, xs:long hour, xs:string message)
+            SendLogMedia(xs:string SerialNumber, xs:int day, xs:string mediaName, xs:boolean bDetail, xs:int X, xs:int Y, xs:int W, xs:int H, xs:long hourBegin, xs:long hourEnd)
+            SendLogMediaList(xs:string SerialNumber, ns0:ArrayOfLogMedia ListLogMedia)
+            SetPlayerIp(xs:string SerialNumber, xs:string Ip)
+            SetPlayerVersion(xs:string SerialNumber, xs:string Version, xs:int ResolutionWidth, xs:int ResolutionHeight)
+            SharedClass(ns0:NavoriFeedExport param)
+            notifyRS232(xs:string SerialNumber, xs:string RSstatus, xs:int colorId)
+         Types (155):
+            ns0:ArrayOfAttachedFile
+            ns0:ArrayOfBanner
+            ns0:ArrayOfBoxGroup
+            ns0:ArrayOfCategory
+            ns0:ArrayOfCountry
+            ns1:ArrayOfEntityKeyMember
+            ns4:ArrayOfKeyValueOflonglong
+            ns0:ArrayOfLogMedia
+            ns0:ArrayOfManagerAlert
+            ns0:ArrayOfManagerEvent
+            ns0:ArrayOfManagerIpRestriction
+            ns0:ArrayOfManagerProfil
+            ns0:ArrayOfManagerWindow
+            ns0:ArrayOfMarker
+            ns0:ArrayOfMarkerMedia
+            ns0:ArrayOfMedia
+            ns0:ArrayOfMediaExtension
+            ns0:ArrayOfMonitoringFilter
+            ns0:ArrayOfPlayerCodecGraphics
+            ns0:ArrayOfPlayerPerformance
+            ns0:ArrayOfPlayerProfil
+            ns0:ArrayOfPlayerProfilScreen
+            ns0:ArrayOfPlayerScreen
+            ns0:ArrayOfPlayerSpecificContent
+            ns0:ArrayOfPlaylist
+            ns0:ArrayOfPlaylistBanner
+            ns0:ArrayOfPlaylistComponent
+            ns0:ArrayOfRoute
+            ns0:ArrayOfRouteMarker
+            ns0:ArrayOfTVFeed
+            ns0:ArrayOfTagword
+            ns0:ArrayOfTemplateMedia
+            ns0:ArrayOfTimeZone
+            ns0:ArrayOfTwitterApp
+            ns0:ArrayOfUpdateFilter
+            ns0:ArrayOfView_Banner
+            ns0:ArrayOfView_Box
+            ns0:ArrayOfView_Folder
+            ns0:ArrayOfView_Group
+            ns0:ArrayOfView_LogMedia
+            ns0:ArrayOfView_Manager
+            ns0:ArrayOfView_ManagerPlayerAlert
+            ns0:ArrayOfView_ManagerPlayerEvent
+            ns0:ArrayOfView_Media
+            ns0:ArrayOfView_MediaPeriod
+            ns0:ArrayOfView_Player
+            ns0:ArrayOfView_PlayerAddOn
+            ns0:ArrayOfView_PlayerCodecGraphics
+            ns0:ArrayOfView_PlayerPerformance
+            ns0:ArrayOfView_PlayerSpecificContent
+            ns0:ArrayOfView_Playlist
+            ns0:ArrayOfView_PlaylistBanner
+            ns0:ArrayOfView_PlaylistComponent
+            ns0:ArrayOfView_PlaylistComponentFull
+            ns0:ArrayOfView_PlaylistManagerRight
+            ns0:ArrayOfView_ScheduleList
+            ns0:ArrayOfView_StatusM
+            ns0:ArrayOfView_TagwordMedia
+            ns0:ArrayOfView_TagwordPlayer
+            ns0:ArrayOfView_Template
+            ns0:ArrayOfView_TemplateMedia
+            ns0:ArrayOfView_XMLMedia_Feed
+            ns0:ArrayOfView_ZoneMedia
+            ns0:ArrayOfView_ZonePlaylist
+            ns0:ArrayOfView_ZoneShape
+            ns0:ArrayOfView_ZoneTemplateMedia
+            ns0:ArrayOfView_ZoneText
+            ns0:ArrayOfXMLFeed
+            ns0:ArrayOfXMLMedia
+            ns0:ArrayOfXMLMediaData
+            ns0:ArrayOfXMLMediaTitle
+            ns4:ArrayOfboolean
+            ns4:ArrayOflong
+            ns4:ArrayOfstring
+            ns0:AttachedFile
+            ns0:Banner
+            ns0:BoxGroup
+            ns0:Category
+            ns0:Country
+            ns1:EntityKey
+            ns1:EntityKeyMember
+            ns2:EntityObject
+            ns0:ErrorType
+            ns0:LogMedia
+            ns0:ManagerAlert
+            ns0:ManagerEvent
+            ns0:ManagerIpRestriction
+            ns0:ManagerProfil
+            ns0:ManagerStatus
+            ns0:ManagerWindow
+            ns0:Marker
+            ns0:MarkerMedia
+            ns0:Media
+            ns0:MediaExtension
+            ns0:MonitoringFilter
+            ns0:NavoriFeedExport
+            ns0:PlayerCodecGraphics
+            ns0:PlayerPerformance
+            ns0:PlayerProfil
+            ns0:PlayerProfilScreen
+            ns0:PlayerScreen
+            ns0:PlayerSpecificContent
+            ns0:Playlist
+            ns0:PlaylistBanner
+            ns0:PlaylistComponent
+            ns0:Route
+            ns0:RouteMarker
+            ns2:StructuralObject
+            ns0:TVFeed
+            ns0:Tagword
+            ns0:TemplateMedia
+            ns0:TimeZone
+            ns0:TwitterApp
+            ns0:UpdateFilter
+            ns0:View_Banner
+            ns0:View_Box
+            ns0:View_Folder
+            ns0:View_Group
+            ns0:View_LogMedia
+            ns0:View_Manager
+            ns0:View_ManagerPlayerAlert
+            ns0:View_ManagerPlayerEvent
+            ns0:View_Media
+            ns0:View_MediaPeriod
+            ns0:View_Player
+            ns0:View_PlayerAddOn
+            ns0:View_PlayerCodecGraphics
+            ns0:View_PlayerPerformance
+            ns0:View_PlayerSpecificContent
+            ns0:View_PlayerStatus
+            ns0:View_Playlist
+            ns0:View_PlaylistBanner
+            ns0:View_PlaylistComponent
+            ns0:View_PlaylistComponentFull
+            ns0:View_PlaylistManagerRight
+            ns0:View_ScheduleList
+            ns0:View_ServerSetting
+            ns0:View_StatusM
+            ns0:View_TagwordMedia
+            ns0:View_TagwordPlayer
+            ns0:View_Template
+            ns0:View_TemplateMedia
+            ns0:View_XMLMedia_Feed
+            ns0:View_ZoneMedia
+            ns0:View_ZonePlaylist
+            ns0:View_ZoneShape
+            ns0:View_ZoneTemplateMedia
+            ns0:View_ZoneText
+            ns0:XMLFeed
+            ns0:XMLMedia
+            ns0:XMLMediaData
+            ns0:XMLMediaTitle
+            ns3:char
+            ns3:duration
+            ns3:guid
+
